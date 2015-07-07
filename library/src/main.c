@@ -9,7 +9,6 @@
 	void systick_configature(void);
 	void Delay_Ms(int ms);
 	void L298N_Control(int Command);
-	//void EXTI_Configurature(void);
 	int HCSR04_TRIG(void);
 	extern int count; //計數值
 	int main()
@@ -73,22 +72,30 @@
 		}								  
 	
 	}
+	/*****************************************/
+	/*NAME:			GPIO_Configurataion		**/
+	/*INPUT:		NULL					**/
+	/*RETURN:		NULL					**/
+	/*HCSR04:		PA12,PA3,PA0			**/
+	/*UART:			PA9,PA10				**/
+	/*Moto_Control:	PC1,PC3,PA2,PA4			**/
+	/*****************************************/
 	void GPIO_Configurataion(void)
 	{
 	
 
 		GPIO_InitTypeDef g;
 
-		
+		//HCSR04,PA12,PA3,PA0
+
 		g.GPIO_Pin=GPIO_Pin_12;
 
 		g.GPIO_Mode=GPIO_Mode_Out_PP;
 
 		g.GPIO_Speed=GPIO_Speed_50MHz;
 
-		GPIO_Init(GPIOA,&g);  
-		//HCSR04
-
+		GPIO_Init(GPIOA,&g);
+		  
 		g.GPIO_Pin=GPIO_Pin_3|GPIO_Pin_0;
 
 		g.GPIO_Mode=GPIO_Mode_IN_FLOATING;
@@ -97,7 +104,7 @@
 
 		GPIO_Init(GPIOA,&g);
 
-	    //TX
+	    //TX,PA9
 		g.GPIO_Pin=GPIO_Pin_9;
 
 		g.GPIO_Mode=GPIO_Mode_AF_PP;
@@ -106,7 +113,7 @@
 
 		GPIO_Init(GPIOA,&g);
 
-		//RX	
+		//RX,PA10	
 
 		g.GPIO_Pin=GPIO_Pin_10;
 
@@ -118,7 +125,7 @@
 				  
 
 
-		//Moto_Control
+		//Moto_Control,PC1,PC3,PA2,PA4
 
 		g.GPIO_Pin=GPIO_Pin_1|GPIO_Pin_3;
 
@@ -127,6 +134,7 @@
 		g.GPIO_Speed=GPIO_Speed_50MHz;
 
 		GPIO_Init(GPIOC,&g);
+
 		
 		g.GPIO_Pin=GPIO_Pin_2|GPIO_Pin_4;
 	  
@@ -138,6 +146,12 @@
 		
 	
 	}
+	/*********************************************/
+	/*NAME:			NVIC_Configuration			**/
+	/*INPUT:		NULL						**/
+	/*RETURN:		NULL						**/
+	/*TIM2:	Preemption:2,SubPriority:0			**/
+	/*********************************************/
 	void NVIC_Configuration()
 	{
 		//TIM2中斷,分時系統用
@@ -154,19 +168,14 @@
 
 		NVIC_Init(&NVIC_Struct);
 
-		/*外部中斷
-
-		NVIC_Struct.NVIC_IRQChannel=EXTI3_IRQChannel;
-
-		NVIC_Struct.NVIC_IRQChannelPreemptionPriority=1;
-
-		NVIC_Struct.NVIC_IRQChannelSubPriority=0;
-
-		NVIC_Struct.NVIC_IRQChannelCmd=ENABLE;
-
-		NVIC_Init(&NVIC_Struct);			  */
 
 	}
+	/*********************************************/
+	/*NAME:			TM2_init					**/
+	/*INPUT:		NULL						**/
+	/*RETURN:		NULL						**/
+	/*大約1us中斷一次							**/
+	/*********************************************/
 	void TM2_init()
 	{
 
@@ -185,17 +194,11 @@
     	TIM_Cmd(TIM2, ENABLE);
 	
 	}
-	void EXTI_Configurature()
-	{
-		EXTI_InitTypeDef BaseEXTI;	
-		BaseEXTI.EXTI_Line=EXTI_Line3;
-		BaseEXTI.EXTI_Mode=EXTI_Mode_Interrupt;
- 		BaseEXTI.EXTI_Trigger=EXTI_Trigger_Rising_Falling;
- 		BaseEXTI.EXTI_LineCmd=ENABLE;
-
-		EXTI_Init(&BaseEXTI);
-	
-	}	 
+	/*********************************************/
+	/*NAME:			systick_configature			**/
+	/*INPUT:		NULL						**/
+	/*RETURN:		NULL						**/
+	/*********************************************/
 	void systick_configature()
 	{
 	   SysTick_CounterCmd(SysTick_Counter_Disable);
@@ -203,6 +206,11 @@
 	   SysTick_CounterCmd(SysTick_Counter_Clear);
 	   
 	}
+	/*********************************************/
+	/*NAME:			Delay_Ms					**/
+	/*INPUT:		int ms						**/
+	/*RETURN:		NULL						**/
+	/*********************************************/
 	void Delay_Ms(int ms)
 	{
 		SysTick_SetReload(9000*ms);
@@ -211,6 +219,11 @@
 		SysTick_CounterCmd(SysTick_Counter_Disable);	
 		SysTick_CounterCmd(SysTick_Counter_Clear);	
 	}
+	/*********************************************/
+	/*NAME:			HCSR04_TRIG					**/
+	/*INPUT:		NULL						**/
+	/*RETURN:		int							**/
+	/*********************************************/
 	int HCSR04_TRIG(void) 
 	{
 		 int pulseIn_head,pulseIn_tie,pulseIn;
@@ -230,6 +243,12 @@
 
 	
 	}
+	/*********************************************/
+	/*NAME:			USART_Configurataion		**/
+	/*INPUT:		NULL						**/
+	/*RETURN:		NULL						**/
+	/*9600,N81									**/
+	/*********************************************/
 	void USART_Configurataion(void)
 	{
 		//USART_Init
@@ -254,6 +273,11 @@
 		USART_Cmd(USART1,ENABLE);
 			
 	}
+	/*********************************************/
+	/*NAME:			L298N_Control				**/
+	/*INPUT:		int Command					**/
+	/*RETURN:		NULL						**/
+	/*********************************************/
 	void L298N_Control(int Command)
 	{
 		switch(Command)

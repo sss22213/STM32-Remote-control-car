@@ -260,33 +260,7 @@ void EXTI2_IRQHandler(void)
 void EXTI3_IRQHandler(void)
 {
 
-	int pulseIn_head,pulseIn_tie,pulseIn;
-	
-	if(num_flag==0)
-	{
-		GPIO_SetBits(GPIOA,GPIO_Pin_4);
-		pulseIn_head=count;
-		num_flag=1;
-	}
-	else if(num_flag==1)
-	{
-		pulseIn_tie=count;
-		pulseIn=(pulseIn_head-pulseIn_tie)*1000/58;
-		if(pulseIn>10 && pulseIn<20)
-		{
-		
-			GPIO_SetBits(GPIOA,GPIO_Pin_6);
-		}
-		if(pulseIn<10 && pulseIn!=0)
-		{
-		
-			  GPIO_SetBits(GPIOA,GPIO_Pin_5);
-			  
-		}
-		num_flag=0;
-	}
 
-	EXTI_ClearITPendingBit(EXTI_Line3);
 }
 
 /*******************************************************************************
