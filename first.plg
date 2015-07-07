@@ -1,0 +1,391 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\project\STM32\project\first\first.uvproj
+Project File Date:  11/29/2014
+
+<h2>Output:</h2>
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+compiling stm32f10x_vector.c...
+boot\stm32f10x_vector.c(44): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(45): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(49): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(53): error:  #29: expected an expression
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(36): error:  #1268-D: declaration aliased to undefined entity "SysTickHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(35): error:  #1268-D: declaration aliased to undefined entity "PendSVC"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(34): error:  #1268-D: declaration aliased to undefined entity "SVCHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(33): error:  #1268-D: declaration aliased to undefined entity "DebugMonitor"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(32): error:  #1268-D: declaration aliased to undefined entity "UsageFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(31): error:  #1268-D: declaration aliased to undefined entity "BusFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(30): error:  #1268-D: declaration aliased to undefined entity "MemManageException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(29): error:  #1268-D: declaration aliased to undefined entity "HardFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(28): error:  #1268-D: declaration aliased to undefined entity "NMIException"
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+compiling stm32f10x_vector.c...
+boot\stm32f10x_vector.c(44): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(45): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(49): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(53): error:  #29: expected an expression
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(36): error:  #1268-D: declaration aliased to undefined entity "SysTickHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(35): error:  #1268-D: declaration aliased to undefined entity "PendSVC"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(34): error:  #1268-D: declaration aliased to undefined entity "SVCHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(33): error:  #1268-D: declaration aliased to undefined entity "DebugMonitor"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(32): error:  #1268-D: declaration aliased to undefined entity "UsageFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(31): error:  #1268-D: declaration aliased to undefined entity "BusFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(30): error:  #1268-D: declaration aliased to undefined entity "MemManageException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(29): error:  #1268-D: declaration aliased to undefined entity "HardFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(28): error:  #1268-D: declaration aliased to undefined entity "NMIException"
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling main.c...
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+compiling stm32f10x_vector.c...
+boot\stm32f10x_vector.c(44): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(45): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(49): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(53): error:  #29: expected an expression
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(36): error:  #1268-D: declaration aliased to undefined entity "SysTickHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(35): error:  #1268-D: declaration aliased to undefined entity "PendSVC"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(34): error:  #1268-D: declaration aliased to undefined entity "SVCHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(33): error:  #1268-D: declaration aliased to undefined entity "DebugMonitor"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(32): error:  #1268-D: declaration aliased to undefined entity "UsageFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(31): error:  #1268-D: declaration aliased to undefined entity "BusFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(30): error:  #1268-D: declaration aliased to undefined entity "MemManageException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(29): error:  #1268-D: declaration aliased to undefined entity "HardFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(28): error:  #1268-D: declaration aliased to undefined entity "NMIException"
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling main.c...
+library\src\main.c(5): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling main.c...
+library\src\main.c(5): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling main.c...
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+assembling stm32f10x_vector.s...
+stm32f10x_vector.s(1): error: A1167E: Invalid line start 
+stm32f10x_vector.s(24): error: A1163E: Unknown opcode Includes , expecting opcode or Macro
+stm32f10x_vector.s(25): error: A1167E: Invalid line start 
+stm32f10x_vector.s(26): error: A1167E: Invalid line start 
+stm32f10x_vector.s(28): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(29): error: A1163E: Unknown opcode void( , expecting opcode or Macro
+stm32f10x_vector.s(30): error: A1163E: Unknown opcode union , expecting opcode or Macro
+stm32f10x_vector.s(32): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(33): error: A1163E: Unknown opcode Uncomment , expecting opcode or Macro
+stm32f10x_vector.s(34): error: A1163E: Unknown opcode STM3210E-EVAL , expecting opcode or Macro
+stm32f10x_vector.s(36): error: A1167E: Invalid line start 
+stm32f10x_vector.s(38): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(39): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(40): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(41): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(44): error: A1163E: Unknown opcode language=extended , expecting opcode or Macro
+stm32f10x_vector.s(45): error: A1163E: Unknown opcode segment="CSTACK" , expecting opcode or Macro
+stm32f10x_vector.s(47): error: A1163E: Unknown opcode __program_start( , expecting opcode or Macro
+stm32f10x_vector.s(49): error: A1163E: Unknown opcode location , expecting opcode or Macro
+stm32f10x_vector.s(50): error: A1163E: Unknown opcode STM32F10x , expecting opcode or Macro
+stm32f10x_vector.s(51): error: A1163E: Unknown opcode intvec_elem , expecting opcode or Macro
+stm32f10x_vector.s(52): error: A1167E: Invalid line start 
+stm32f10x_vector.s(53): error: A1137E: Unexpected characters at end of line
+stm32f10x_vector.s(54): error: A1163E: Unknown opcode __program_start, , expecting opcode or Macro
+stm32f10x_vector.s(55): error: A1163E: Unknown opcode NMIException, , expecting opcode or Macro
+stm32f10x_vector.s(56): error: A1163E: Unknown opcode HardFaultException, , expecting opcode or Macro
+stm32f10x_vector.s(57): error: A1163E: Unknown opcode MemManageException, , expecting opcode or Macro
+stm32f10x_vector.s(58): error: A1163E: Unknown opcode BusFaultException, , expecting opcode or Macro
+stm32f10x_vector.s(59): error: A1163E: Unknown opcode UsageFaultException, , expecting opcode or Macro
+stm32f10x_vector.s(60): error: A1137E: Unexpected characters at end of line
+stm32f10x_vector.s(61): error: A1163E: Unknown opcode SVCHandler, , expecting opcode or Macro
+stm32f10x_vector.s(62): error: A1163E: Unknown opcode DebugMonitor, , expecting opcode or Macro
+stm32f10x_vector.s(63): error: A1137E: Unexpected characters at end of line
+stm32f10x_vector.s(64): error: A1163E: Unknown opcode PendSVC, , expecting opcode or Macro
+stm32f10x_vector.s(65): error: A1163E: Unknown opcode SysTickHandler, , expecting opcode or Macro
+stm32f10x_vector.s(66): error: A1163E: Unknown opcode WWDG_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(67): error: A1163E: Unknown opcode PVD_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(68): error: A1163E: Unknown opcode TAMPER_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(69): error: A1163E: Unknown opcode RTC_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(70): error: A1163E: Unknown opcode FLASH_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(71): error: A1163E: Unknown opcode RCC_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(72): error: A1163E: Unknown opcode EXTI0_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(73): error: A1163E: Unknown opcode EXTI1_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(74): error: A1163E: Unknown opcode EXTI2_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(75): error: A1163E: Unknown opcode EXTI3_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(76): error: A1163E: Unknown opcode EXTI4_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(77): error: A1163E: Unknown opcode DMA1_Channel1_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(78): error: A1163E: Unknown opcode DMA1_Channel2_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(79): error: A1163E: Unknown opcode DMA1_Channel3_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(80): error: A1163E: Unknown opcode DMA1_Channel4_IRQHandler, , expecting opcode or Macro
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling main.c...
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+compiling stm32f10x_vector.c...
+boot\stm32f10x_vector.c(44): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(45): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(49): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(53): error:  #29: expected an expression
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(36): error:  #1268-D: declaration aliased to undefined entity "SysTickHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(35): error:  #1268-D: declaration aliased to undefined entity "PendSVC"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(34): error:  #1268-D: declaration aliased to undefined entity "SVCHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(33): error:  #1268-D: declaration aliased to undefined entity "DebugMonitor"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(32): error:  #1268-D: declaration aliased to undefined entity "UsageFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(31): error:  #1268-D: declaration aliased to undefined entity "BusFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(30): error:  #1268-D: declaration aliased to undefined entity "MemManageException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(29): error:  #1268-D: declaration aliased to undefined entity "HardFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(28): error:  #1268-D: declaration aliased to undefined entity "NMIException"
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling main.c...
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+compiling stm32f10x_vector.c...
+boot\stm32f10x_vector.c(44): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(45): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(49): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(53): error:  #29: expected an expression
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(36): error:  #1268-D: declaration aliased to undefined entity "SysTickHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(35): error:  #1268-D: declaration aliased to undefined entity "PendSVC"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(34): error:  #1268-D: declaration aliased to undefined entity "SVCHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(33): error:  #1268-D: declaration aliased to undefined entity "DebugMonitor"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(32): error:  #1268-D: declaration aliased to undefined entity "UsageFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(31): error:  #1268-D: declaration aliased to undefined entity "BusFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(30): error:  #1268-D: declaration aliased to undefined entity "MemManageException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(29): error:  #1268-D: declaration aliased to undefined entity "HardFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(28): error:  #1268-D: declaration aliased to undefined entity "NMIException"
+compiling main.c...
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+compiling stm32f10x_vector.c...
+boot\stm32f10x_vector.c(44): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(45): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(49): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(53): error:  #29: expected an expression
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(36): error:  #1268-D: declaration aliased to undefined entity "SysTickHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(35): error:  #1268-D: declaration aliased to undefined entity "PendSVC"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(34): error:  #1268-D: declaration aliased to undefined entity "SVCHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(33): error:  #1268-D: declaration aliased to undefined entity "DebugMonitor"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(32): error:  #1268-D: declaration aliased to undefined entity "UsageFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(31): error:  #1268-D: declaration aliased to undefined entity "BusFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(30): error:  #1268-D: declaration aliased to undefined entity "MemManageException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(29): error:  #1268-D: declaration aliased to undefined entity "HardFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(28): error:  #1268-D: declaration aliased to undefined entity "NMIException"
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling main.c...
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling main.c...
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+assembling stm32f10x_vector.s...
+stm32f10x_vector.s(1): error: A1167E: Invalid line start 
+stm32f10x_vector.s(24): error: A1163E: Unknown opcode Includes , expecting opcode or Macro
+stm32f10x_vector.s(25): error: A1167E: Invalid line start 
+stm32f10x_vector.s(26): error: A1167E: Invalid line start 
+stm32f10x_vector.s(28): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(29): error: A1163E: Unknown opcode void( , expecting opcode or Macro
+stm32f10x_vector.s(30): error: A1163E: Unknown opcode union , expecting opcode or Macro
+stm32f10x_vector.s(32): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(33): error: A1163E: Unknown opcode Uncomment , expecting opcode or Macro
+stm32f10x_vector.s(34): error: A1163E: Unknown opcode STM3210E-EVAL , expecting opcode or Macro
+stm32f10x_vector.s(36): error: A1167E: Invalid line start 
+stm32f10x_vector.s(38): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(39): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(40): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(41): error: A1163E: Unknown opcode Private , expecting opcode or Macro
+stm32f10x_vector.s(44): error: A1163E: Unknown opcode language=extended , expecting opcode or Macro
+stm32f10x_vector.s(45): error: A1163E: Unknown opcode segment="CSTACK" , expecting opcode or Macro
+stm32f10x_vector.s(47): error: A1163E: Unknown opcode __program_start( , expecting opcode or Macro
+stm32f10x_vector.s(49): error: A1163E: Unknown opcode location , expecting opcode or Macro
+stm32f10x_vector.s(50): error: A1163E: Unknown opcode STM32F10x , expecting opcode or Macro
+stm32f10x_vector.s(51): error: A1163E: Unknown opcode intvec_elem , expecting opcode or Macro
+stm32f10x_vector.s(52): error: A1167E: Invalid line start 
+stm32f10x_vector.s(53): error: A1137E: Unexpected characters at end of line
+stm32f10x_vector.s(54): error: A1163E: Unknown opcode __program_start, , expecting opcode or Macro
+stm32f10x_vector.s(55): error: A1163E: Unknown opcode NMIException, , expecting opcode or Macro
+stm32f10x_vector.s(56): error: A1163E: Unknown opcode HardFaultException, , expecting opcode or Macro
+stm32f10x_vector.s(57): error: A1163E: Unknown opcode MemManageException, , expecting opcode or Macro
+stm32f10x_vector.s(58): error: A1163E: Unknown opcode BusFaultException, , expecting opcode or Macro
+stm32f10x_vector.s(59): error: A1163E: Unknown opcode UsageFaultException, , expecting opcode or Macro
+stm32f10x_vector.s(60): error: A1137E: Unexpected characters at end of line
+stm32f10x_vector.s(61): error: A1163E: Unknown opcode SVCHandler, , expecting opcode or Macro
+stm32f10x_vector.s(62): error: A1163E: Unknown opcode DebugMonitor, , expecting opcode or Macro
+stm32f10x_vector.s(63): error: A1137E: Unexpected characters at end of line
+stm32f10x_vector.s(64): error: A1163E: Unknown opcode PendSVC, , expecting opcode or Macro
+stm32f10x_vector.s(65): error: A1163E: Unknown opcode SysTickHandler, , expecting opcode or Macro
+stm32f10x_vector.s(66): error: A1163E: Unknown opcode WWDG_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(67): error: A1163E: Unknown opcode PVD_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(68): error: A1163E: Unknown opcode TAMPER_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(69): error: A1163E: Unknown opcode RTC_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(70): error: A1163E: Unknown opcode FLASH_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(71): error: A1163E: Unknown opcode RCC_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(72): error: A1163E: Unknown opcode EXTI0_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(73): error: A1163E: Unknown opcode EXTI1_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(74): error: A1163E: Unknown opcode EXTI2_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(75): error: A1163E: Unknown opcode EXTI3_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(76): error: A1163E: Unknown opcode EXTI4_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(77): error: A1163E: Unknown opcode DMA1_Channel1_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(78): error: A1163E: Unknown opcode DMA1_Channel2_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(79): error: A1163E: Unknown opcode DMA1_Channel3_IRQHandler, , expecting opcode or Macro
+stm32f10x_vector.s(80): error: A1163E: Unknown opcode DMA1_Channel4_IRQHandler, , expecting opcode or Macro
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling main.c...
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+compiling stm32f10x_vector.c...
+boot\stm32f10x_vector.c(44): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(45): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(49): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(53): error:  #29: expected an expression
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(36): error:  #1268-D: declaration aliased to undefined entity "SysTickHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(35): error:  #1268-D: declaration aliased to undefined entity "PendSVC"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(34): error:  #1268-D: declaration aliased to undefined entity "SVCHandler"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(33): error:  #1268-D: declaration aliased to undefined entity "DebugMonitor"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(32): error:  #1268-D: declaration aliased to undefined entity "UsageFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(31): error:  #1268-D: declaration aliased to undefined entity "BusFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(30): error:  #1268-D: declaration aliased to undefined entity "MemManageException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(29): error:  #1268-D: declaration aliased to undefined entity "HardFaultException"
+C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_it.h(28): error:  #1268-D: declaration aliased to undefined entity "NMIException"
+Target not created
+Build target 'first'
+assembling cortexm3_macro.s...
+boot\cortexm3_macro.s(17): error: A1163E: Unknown opcode RSEG , expecting opcode or Macro
+boot\cortexm3_macro.s(50): error: A1355U: A Label was found which was in no AREA
+compiling stm32f10x_vector.c...
+boot\stm32f10x_vector.c(44): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(45): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(49): warning:  #161-D: unrecognized #pragma
+boot\stm32f10x_vector.c(53): error:  #29: expected an expression
+Target not created
+Build target 'first'
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling main.c...
+linking...
+.\obj\first.axf: Error: L6320W: Ignoring --entry command. Cannot find argument 'Reset_Handler'.
+.\obj\first.axf: Warning: L6320W: Ignoring --first command. Cannot find argument '__Vectors'.
+Target not created
+Build target 'first'
+assembling STM32F10x.s...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling main.c...
+linking...
+Program Size: Code=308 RO-data=252 RW-data=0 ZI-data=608  
+".\obj\first.axf" - 0 Error(s), 0 Warning(s).
+Build target 'first'
+assembling STM32F10x.s...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_it.c...
+compiling main.c...
+linking...
+Program Size: Code=456 RO-data=252 RW-data=0 ZI-data=608  
+".\obj\first.axf" - 0 Error(s), 0 Warning(s).
+Build target 'first'
+assembling STM32F10x.s...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_it.c...
+compiling main.c...
+linking...
+.\obj\first.axf: Error: L6218E: Undefined symbol RCC_Configure (referred from main.o).
+Target not created
+Build target 'first'
+assembling STM32F10x.s...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_it.c...
+compiling main.c...
+linking...
+.\obj\first.axf: Error: L6218E: Undefined symbol RCC_Configureation (referred from main.o).
+Target not created
+Build target 'first'
+assembling STM32F10x.s...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_it.c...
+compiling main.c...
+linking...
+Program Size: Code=2174 RO-data=274 RW-data=0 ZI-data=608  
+".\obj\first.axf" - 0 Error(s), 0 Warning(s).
