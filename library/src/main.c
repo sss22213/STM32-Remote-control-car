@@ -17,7 +17,6 @@
 		RCC_Configuration();
 		GPIO_Configurataion();
 		NVIC_Configuration();
-		//EXTI_Configurature();
 		USART_Configurataion();
 		systick_configature();
 		TM2_init();
