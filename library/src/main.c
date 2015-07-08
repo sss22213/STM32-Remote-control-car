@@ -8,6 +8,7 @@
 	void  NVIC_Configuration(void);
 	void systick_configature(void);
 	void Delay_Ms(int ms);
+	void Delay_us(int us);
 	void L298N_Control(int Command);
 	int HCSR04_TRIG(void);
 	extern int count; //­p¼Æ­È
@@ -25,7 +26,9 @@
 		{ 
 		 
 			USART_SendData(USART1,HCSR04_TRIG());
-			Delay_Ms(1000);	
+			Delay_Ms(1000);
+		
+				
 		} 
 		
 
@@ -66,7 +69,7 @@
 		 
 			RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE);
 
-			RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1|RCC_APB2Periph_GPIOA|RCC_APB2Periph_AFIO,ENABLE);
+			RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1|RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOC|RCC_APB2Periph_AFIO,ENABLE);
 
 		}								  
 	
@@ -219,6 +222,19 @@
 		SysTick_CounterCmd(SysTick_Counter_Clear);	
 	}
 	/*********************************************/
+	/*NAME:			Delay_us					**/
+	/*INPUT:		int us						**/
+	/*RETURN:		NULL						**/
+	/*********************************************/
+	void Delay_us(int us)
+	{
+		SysTick_SetReload(9*us);
+		SysTick_CounterCmd(SysTick_Counter_Enable);
+		while(SysTick_GetFlagStatus(SysTick_FLAG_COUNT)==0);
+		SysTick_CounterCmd(SysTick_Counter_Disable);	
+		SysTick_CounterCmd(SysTick_Counter_Clear);	
+	}
+	/*********************************************/
 	/*NAME:			HCSR04_TRIG					**/
 	/*INPUT:		NULL						**/
 	/*RETURN:		int							**/
@@ -227,11 +243,11 @@
 	{
 		 int pulseIn_head,pulseIn_tie,pulseIn;
 		 GPIO_ResetBits(GPIOA,GPIO_Pin_12);
-		 Delay_Ms(2);
+		 Delay_us(2);
 		 GPIO_SetBits(GPIOA,GPIO_Pin_12);
-		 Delay_Ms(10);
+		 Delay_us(10);
 		 GPIO_ResetBits(GPIOA,GPIO_Pin_12);
-
+		
 		 while(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_3)==0);
 		 pulseIn_head=count;
 		 while(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_3)==1);
