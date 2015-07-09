@@ -241,7 +241,7 @@
 	/*********************************************/
 	int HCSR04_TRIG(void) 
 	{
-		 int pulseIn_head,pulseIn_tie,pulseIn;
+		 long pulseIn_head,pulseIn_tie,pulseIn,n;
 		 GPIO_ResetBits(GPIOA,GPIO_Pin_12);
 		 Delay_us(2);
 		 GPIO_SetBits(GPIOA,GPIO_Pin_12);
@@ -251,8 +251,14 @@
 		 while(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_3)==0);
 		 pulseIn_head=count;
 		 while(GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_3)==1);
-		 pulseIn_tie=count;
+		 pulseIn_tie=count;														
 		 pulseIn=(pulseIn_tie-pulseIn_head)/58;
+
+		 //®Õ¥¿
+		 n=(pulseIn-4)/2+1;
+
+		 pulseIn=pulseIn+3*n-2;
+
 		 return pulseIn; 
 		 
 
