@@ -9,9 +9,13 @@
 	void systick_configature(void);
 	void Delay_Ms(int ms);
 	void Delay_us(int us);
+	void Delay_S(int s);
 	void L298N_Control(int Command);
 	int HCSR04_TRIG(void);
+	int	Light_Distance(void);
 	extern int count; //計數值
+	extern long count_ms;
+	extern int frequency;
 	int main()
 	{	  
 			
@@ -24,10 +28,14 @@
 		
 		while(1)
 		{ 
-		 
-			USART_SendData(USART1,HCSR04_TRIG());
-			Delay_Ms(1000);
-		
+		 	//L298N_Control(1);
+			//Delay_Ms(1000);
+			L298N_Control(1);
+			Delay_S(10);
+			USART_SendData(USART1,frequency);
+			L298N_Control(4);
+			Delay_S(10);
+			USART_SendData(USART1,0x02);
 				
 		} 
 		
@@ -67,7 +75,7 @@
 
 			while(RCC_GetSYSCLKSource()!=0x08);
 		 
-			RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2,ENABLE);
+			RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2|RCC_APB1Periph_TIM3,ENABLE);
 
 			RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1|RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOC|RCC_APB2Periph_AFIO,ENABLE);
 
@@ -87,6 +95,14 @@
 	
 
 		GPIO_InitTypeDef g;
+
+		g.GPIO_Pin=GPIO_Pin_4;
+
+		g.GPIO_Mode=GPIO_Mode_Out_PP;
+
+		g.GPIO_Speed=GPIO_Speed_50MHz;
+
+		GPIO_Init(GPIOA,&g);
 
 		//HCSR04,PA12,PA3,PA0
 
@@ -127,7 +143,7 @@
 				  
 
 
-		//Moto_Control,PC1,PC3,PA2,PA4
+		//Moto_Control,PC1,PC3,PC7,PC9
 
 		g.GPIO_Pin=GPIO_Pin_1|GPIO_Pin_3;
 
@@ -138,9 +154,19 @@
 		GPIO_Init(GPIOC,&g);
 
 		
-		g.GPIO_Pin=GPIO_Pin_2|GPIO_Pin_4;
+		g.GPIO_Pin=GPIO_Pin_7|GPIO_Pin_9;
 	  
 		g.GPIO_Mode=GPIO_Mode_Out_PP;
+
+		g.GPIO_Speed=GPIO_Speed_50MHz;
+
+		GPIO_Init(GPIOC,&g);
+		
+		//Light Distance PA7
+
+		g.GPIO_Pin=GPIO_Pin_7;
+
+		g.GPIO_Mode=GPIO_Mode_IPD;
 
 		g.GPIO_Speed=GPIO_Speed_50MHz;
 
@@ -169,7 +195,17 @@
 		NVIC_Struct.NVIC_IRQChannelCmd=ENABLE;
 
 		NVIC_Init(&NVIC_Struct);
+		
+		//TIM3,速度捕捉
+		NVIC_Struct.NVIC_IRQChannel = TIM3_IRQChannel;
 
+		NVIC_Struct.NVIC_IRQChannelPreemptionPriority = 3;
+
+		NVIC_Struct.NVIC_IRQChannelSubPriority = 2;
+
+		NVIC_Struct.NVIC_IRQChannelCmd = ENABLE;
+
+		NVIC_Init(&NVIC_Struct);
 
 	}
 	/*********************************************/
@@ -184,6 +220,8 @@
 		//大約1us中斷一次
 		TIM_TimeBaseInitTypeDef TIM_Basestruct;
 
+		TIM_ICInitTypeDef TIM_ICInitStructure;
+		
 		TIM_Basestruct.TIM_Prescaler=5.500;
 		TIM_Basestruct.TIM_CounterMode=TIM_CounterMode_Up;
 		TIM_Basestruct.TIM_Period=9.999;
@@ -194,6 +232,27 @@
 		TIM_ITConfig(TIM2,TIM_IT_Update, ENABLE);
     	
     	TIM_Cmd(TIM2, ENABLE);
+
+
+	
+	
+		
+		TIM_Basestruct.TIM_Period = 65535-1;
+		TIM_Basestruct.TIM_Prescaler = 72-1;
+		TIM_Basestruct.TIM_ClockDivision = 0;
+		TIM_Basestruct.TIM_CounterMode = TIM_CounterMode_Up;
+		TIM_TimeBaseInit(TIM3,&TIM_Basestruct);
+		
+		TIM_ICInitStructure.TIM_Channel = TIM_Channel_2;
+		TIM_ICInitStructure.TIM_ICPolarity = TIM_ICPolarity_Rising;
+		TIM_ICInitStructure.TIM_ICSelection = TIM_ICSelection_DirectTI;
+		TIM_ICInitStructure.TIM_ICPrescaler = TIM_ICPSC_DIV1;
+		TIM_ICInitStructure.TIM_ICFilter = 0x0F;
+		TIM_ICInit(TIM3, &TIM_ICInitStructure);
+		TIM_Cmd(TIM3, ENABLE);
+
+		TIM_ITConfig(TIM3,TIM_IT_CC2, ENABLE);
+		
 	
 	}
 	/*********************************************/
@@ -220,6 +279,15 @@
 		while(SysTick_GetFlagStatus(SysTick_FLAG_COUNT)==0);
 		SysTick_CounterCmd(SysTick_Counter_Disable);	
 		SysTick_CounterCmd(SysTick_Counter_Clear);	
+	}
+	void Delay_S(int s)
+	{
+		
+		for(;s>0;s--)
+		{
+			Delay_Ms(1000);
+			
+		}
 	}
 	/*********************************************/
 	/*NAME:			Delay_us					**/
@@ -308,36 +376,50 @@
 				GPIO_SetBits(GPIOC,GPIO_Pin_1);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_3);
 				//右
-				GPIO_SetBits(GPIOA,GPIO_Pin_2);
-				GPIO_ResetBits(GPIOA,GPIO_Pin_4);
+				GPIO_SetBits(GPIOC,GPIO_Pin_7);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
 				break;
 			case 2:	//反轉
 				//左
 				GPIO_ResetBits(GPIOC,GPIO_Pin_1);
 				GPIO_SetBits(GPIOC,GPIO_Pin_3);
 				//右
-				GPIO_ResetBits(GPIOA,GPIO_Pin_2);
-				GPIO_SetBits(GPIOA,GPIO_Pin_4);
-				break;
+				GPIO_ResetBits(GPIOC,GPIO_Pin_7);
+				GPIO_SetBits(GPIOC,GPIO_Pin_9);
+				break;										  
 			case 3:	//右轉
 				//左
 				GPIO_ResetBits(GPIOC,GPIO_Pin_1);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_3);
 				//右
-				GPIO_ResetBits(GPIOA,GPIO_Pin_2);
-				GPIO_SetBits(GPIOA,GPIO_Pin_4);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_7);
+				GPIO_SetBits(GPIOC,GPIO_Pin_9);
 				break;
 			case 4:	//右轉
 				//左
 				GPIO_ResetBits(GPIOC,GPIO_Pin_1);
 				GPIO_SetBits(GPIOC,GPIO_Pin_3);
 				//右
-				GPIO_ResetBits(GPIOA,GPIO_Pin_2);
-				GPIO_ResetBits(GPIOA,GPIO_Pin_4);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_7);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
 				break;							
 	
 		}
+
+	}
 	
+	int	Light_Distance(void)
+	{
+		
+		 long pulseIn_head,pulseIn_tie,pulseIn;
+		 while(GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_4)==0);
+		 pulseIn_head=count;
+		 while(GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_4)==1);
+		 pulseIn_tie=count;														
+		 pulseIn=(pulseIn_tie-pulseIn_head);
+
+
+		 return pulseIn; 
 	
 	
 	

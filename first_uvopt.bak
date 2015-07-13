@@ -274,7 +274,7 @@
       <GroupNumber>2</GroupNumber>
       <FileNumber>6</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -355,8 +355,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>265</TopLine>
-      <CurrentLine>265</CurrentLine>
+      <TopLine>58</TopLine>
+      <CurrentLine>58</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\interrupt\stm32f10x_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_it.c</FilenameWithoutPath>
@@ -388,10 +388,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>60</ColumnNumber>
+      <ColumnNumber>3</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>231</TopLine>
-      <CurrentLine>231</CurrentLine>
+      <TopLine>7</TopLine>
+      <CurrentLine>30</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\library\src\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -399,35 +399,9 @@
   </Group>
 
   <AlienFiles>
-    <PathWithFilename>C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_systick.h</PathWithFilename>
-    <TopLine>35</TopLine>
-    <CurrentLine>55</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_gpio.h</PathWithFilename>
-    <TopLine>208</TopLine>
-    <CurrentLine>208</CurrentLine>
+    <PathWithFilename>C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_usart.h</PathWithFilename>
+    <TopLine>221</TopLine>
+    <CurrentLine>239</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -2044,28 +2018,22 @@
       <ActiveTab>2</ActiveTab>
       <Documents>
         <Doc>
-          <Name>C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_gpio.h</Name>
-          <ColumnNumber>38</ColumnNumber>
-          <TopLine>208</TopLine>
-          <CurrentLine>208</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>.\interrupt\stm32f10x_it.c</Name>
           <ColumnNumber>0</ColumnNumber>
-          <TopLine>265</TopLine>
-          <CurrentLine>265</CurrentLine>
+          <TopLine>58</TopLine>
+          <CurrentLine>58</CurrentLine>
         </Doc>
         <Doc>
           <Name>.\library\src\main.c</Name>
-          <ColumnNumber>60</ColumnNumber>
-          <TopLine>231</TopLine>
-          <CurrentLine>231</CurrentLine>
+          <ColumnNumber>3</ColumnNumber>
+          <TopLine>7</TopLine>
+          <CurrentLine>30</CurrentLine>
         </Doc>
         <Doc>
-          <Name>C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_systick.h</Name>
-          <ColumnNumber>19</ColumnNumber>
-          <TopLine>35</TopLine>
-          <CurrentLine>55</CurrentLine>
+          <Name>C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_usart.h</Name>
+          <ColumnNumber>53</ColumnNumber>
+          <TopLine>221</TopLine>
+          <CurrentLine>239</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

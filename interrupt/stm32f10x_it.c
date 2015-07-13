@@ -18,7 +18,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
 long count=0;
+long count_ms=0;
 int num_flag=0;
+long CCR3,frequency,befrequency=0;
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -272,6 +274,7 @@ void EXTI3_IRQHandler(void)
 *******************************************************************************/
 void EXTI4_IRQHandler(void)
 {
+
 }
 
 /*******************************************************************************
@@ -477,7 +480,9 @@ void TIM2_IRQHandler(void)
 	 if (TIM_GetITStatus(TIM2,TIM_IT_Update) == SET)
     { 
        	count++;
-	
+		
+		
+
         TIM_ClearITPendingBit(TIM2,TIM_FLAG_Update);
     }
 }
@@ -491,6 +496,18 @@ void TIM2_IRQHandler(void)
 *******************************************************************************/
 void TIM3_IRQHandler(void)
 {
+	frequency=0;
+	CCR3=0;
+	TIM_ClearITPendingBit(TIM3 ,TIM_FLAG_Update);
+	CCR3=TIM_GetCapture2(TIM3);
+	if(CCR3==0)
+	{
+		frequency=0;	
+	}
+	else
+	{
+		frequency=72000000/CCR3;
+	}
 }
 
 /*******************************************************************************
