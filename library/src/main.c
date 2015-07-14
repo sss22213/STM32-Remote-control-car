@@ -11,11 +11,11 @@
 	void Delay_us(int us);
 	void Delay_S(int s);
 	void L298N_Control(int Command);
+	void MPU6050_Init(void);
+	void I2C_WriteByte(u8 DeviceAddress,u8 MemoryAddress,u8 data);
+	u8 I2C_ReadByte(u8 DeviceAddress,u8 MemoryAddress);
 	int HCSR04_TRIG(void);
-	int	Light_Distance(void);
 	extern int count; //計數值
-	extern long count_ms;
-	extern int frequency;
 	int main()
 	{	  
 			
@@ -25,17 +25,17 @@
 		USART_Configurataion();
 		systick_configature();
 		TM2_init();
-		
+		MPU6050_Init();
+		;
 		while(1)
 		{ 
 		 	//L298N_Control(1);
 			//Delay_Ms(1000);
-			L298N_Control(1);
-			Delay_S(10);
-			USART_SendData(USART1,frequency);
-			L298N_Control(4);
-			Delay_S(10);
-			USART_SendData(USART1,0x02);
+			USART_SendData(USART1,I2C_ReadByte(0xD0,0x41));
+			//L298N_Control(4);
+			Delay_S(1);		
+			
+			//USART_SendData(USART1,0x02);
 				
 		} 
 		
@@ -75,9 +75,10 @@
 
 			while(RCC_GetSYSCLKSource()!=0x08);
 		 
-			RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2|RCC_APB1Periph_TIM3,ENABLE);
+			RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2|RCC_APB1Periph_I2C1,ENABLE);
 
-			RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1|RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOC|RCC_APB2Periph_AFIO,ENABLE);
+		 
+			RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1|RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOB|RCC_APB2Periph_GPIOC|RCC_APB2Periph_AFIO,ENABLE);
 
 		}								  
 	
@@ -162,15 +163,17 @@
 
 		GPIO_Init(GPIOC,&g);
 		
-		//Light Distance PA7
+		//MPU6050,PB6,PB7
 
-		g.GPIO_Pin=GPIO_Pin_7;
-
-		g.GPIO_Mode=GPIO_Mode_IPD;
+		g.GPIO_Pin=GPIO_Pin_6|GPIO_Pin_7;
+	  
+		g.GPIO_Mode=GPIO_Mode_AF_OD;
 
 		g.GPIO_Speed=GPIO_Speed_50MHz;
 
-		GPIO_Init(GPIOA,&g);	  	  
+		GPIO_Init(GPIOB,&g);
+
+	
 		
 	
 	}
@@ -196,16 +199,6 @@
 
 		NVIC_Init(&NVIC_Struct);
 		
-		//TIM3,速度捕捉
-		NVIC_Struct.NVIC_IRQChannel = TIM3_IRQChannel;
-
-		NVIC_Struct.NVIC_IRQChannelPreemptionPriority = 3;
-
-		NVIC_Struct.NVIC_IRQChannelSubPriority = 2;
-
-		NVIC_Struct.NVIC_IRQChannelCmd = ENABLE;
-
-		NVIC_Init(&NVIC_Struct);
 
 	}
 	/*********************************************/
@@ -220,7 +213,7 @@
 		//大約1us中斷一次
 		TIM_TimeBaseInitTypeDef TIM_Basestruct;
 
-		TIM_ICInitTypeDef TIM_ICInitStructure;
+//		TIM_ICInitTypeDef TIM_ICInitStructure;
 		
 		TIM_Basestruct.TIM_Prescaler=5.500;
 		TIM_Basestruct.TIM_CounterMode=TIM_CounterMode_Up;
@@ -234,25 +227,6 @@
     	TIM_Cmd(TIM2, ENABLE);
 
 
-	
-	
-		
-		TIM_Basestruct.TIM_Period = 65535-1;
-		TIM_Basestruct.TIM_Prescaler = 72-1;
-		TIM_Basestruct.TIM_ClockDivision = 0;
-		TIM_Basestruct.TIM_CounterMode = TIM_CounterMode_Up;
-		TIM_TimeBaseInit(TIM3,&TIM_Basestruct);
-		
-		TIM_ICInitStructure.TIM_Channel = TIM_Channel_2;
-		TIM_ICInitStructure.TIM_ICPolarity = TIM_ICPolarity_Rising;
-		TIM_ICInitStructure.TIM_ICSelection = TIM_ICSelection_DirectTI;
-		TIM_ICInitStructure.TIM_ICPrescaler = TIM_ICPSC_DIV1;
-		TIM_ICInitStructure.TIM_ICFilter = 0x0F;
-		TIM_ICInit(TIM3, &TIM_ICInitStructure);
-		TIM_Cmd(TIM3, ENABLE);
-
-		TIM_ITConfig(TIM3,TIM_IT_CC2, ENABLE);
-		
 	
 	}
 	/*********************************************/
@@ -407,20 +381,116 @@
 		}
 
 	}
-	
-	int	Light_Distance(void)
+	void MPU6050_Init(void)
 	{
 		
-		 long pulseIn_head,pulseIn_tie,pulseIn;
-		 while(GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_4)==0);
-		 pulseIn_head=count;
-		 while(GPIO_ReadInputDataBit(GPIOC,GPIO_Pin_4)==1);
-		 pulseIn_tie=count;														
-		 pulseIn=(pulseIn_tie-pulseIn_head);
+		//u8 BUF;
+		I2C_InitTypeDef I2C_Con;
+		
+		I2C_Con.I2C_Mode=I2C_Mode_I2C;
+ 		I2C_Con.I2C_DutyCycle=I2C_DutyCycle_2;
+		I2C_Con.I2C_OwnAddress1=0xA0;
+		I2C_Con.I2C_Ack=I2C_Ack_Enable;
+		I2C_Con.I2C_AcknowledgedAddress=I2C_AcknowledgedAddress_7bit;
+		I2C_Con.I2C_ClockSpeed=50000;
 
+	
+		I2C_Init(I2C1,&I2C_Con);
+		I2C_Cmd(I2C1,ENABLE);
+		I2C_AcknowledgeConfig(I2C1,ENABLE);
 
-		 return pulseIn; 
+		Delay_Ms(1000);
+
+		I2C_WriteByte(0xD0,0x6B,0x80);
+		
+		Delay_Ms(200);
+
+		I2C_WriteByte(0xD0,0x6B,0x00);
+
+		Delay_Ms(200);
+	 
+	    I2C_WriteByte(0xD0,0x19,0x07);  //SMPLRT_DIV
+		  
+		
+
+		I2C_WriteByte(0xD0,0x1A,0x06);  //Config
+
+		 
+		I2C_WriteByte(0xD0,0x1B,0x18);  //GYRO_CONFIG
+	
+	   	I2C_WriteByte(0xD0,0x1C,0x01);  //ACCEL_CONFIG
+		
 	
 	
-	
+		
 	}
+	void I2C_WriteByte(u8 DeviceAddress,u8 MemoryAddress,u8 data)
+	{
+		
+		//等待I2C閒置
+		while(I2C_GetFlagStatus(I2C1,I2C_FLAG_BUSY));
+		
+		//啟動訊號
+		I2C_GenerateSTART(I2C1,ENABLE);	
+		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)!=SUCCESS);
+
+		//發送裝置位置
+		I2C_Send7bitAddress(I2C1,DeviceAddress,I2C_Direction_Transmitter);
+		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)!=SUCCESS);
+
+
+		//發送記憶體位置
+		I2C_SendData(I2C1,MemoryAddress);
+		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)!=SUCCESS);
+
+		//發送數據
+		I2C_SendData(I2C1,data);
+		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)!=SUCCESS);
+
+		//停止訊號
+		I2C_GenerateSTOP(I2C1,ENABLE);
+	}
+	u8 I2C_ReadByte(u8 DeviceAddress,u8 MemoryAddress)
+	{
+		
+		u8 data;
+
+		//等待I2C閒置
+		while(I2C_GetFlagStatus(I2C1,I2C_FLAG_BUSY));
+		
+		//啟動訊號
+		I2C_GenerateSTART(I2C1,ENABLE);	
+		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)!=SUCCESS);
+
+		//發送裝置位置
+		I2C_Send7bitAddress(I2C1,DeviceAddress,I2C_Direction_Transmitter);
+		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)!=SUCCESS);
+		I2C_Cmd(I2C1,ENABLE);
+
+		//發送記憶體位置
+		I2C_SendData(I2C1,MemoryAddress);
+		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)!=SUCCESS);
+
+		//啟動訊號
+		I2C_GenerateSTART(I2C1,ENABLE);	
+		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)!=SUCCESS);
+		
+		//發送裝置位置
+		I2C_Send7bitAddress(I2C1,DeviceAddress,I2C_Direction_Receiver);
+		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)!=SUCCESS);
+		
+		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)!=SUCCESS);
+
+		data=I2C_ReceiveData(I2C1);			//接收資料
+		
+		//I2C_AcknowledgeConfig(I2C1,DISABLE); //ACK 關閉	
+		
+		//停止訊號
+		I2C_GenerateSTOP(I2C1,ENABLE);
+		
+		I2C_AcknowledgeConfig(I2C1,ENABLE); //ACK 關閉	
+	
+		return data;		
+	
+	}	
+	
