@@ -402,10 +402,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>16</ColumnNumber>
+      <ColumnNumber>47</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>329</TopLine>
-      <CurrentLine>329</CurrentLine>
+      <TopLine>25</TopLine>
+      <CurrentLine>33</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\library\src\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -2039,9 +2039,9 @@
         </Doc>
         <Doc>
           <Name>.\library\src\main.c</Name>
-          <ColumnNumber>16</ColumnNumber>
-          <TopLine>329</TopLine>
-          <CurrentLine>329</CurrentLine>
+          <ColumnNumber>47</ColumnNumber>
+          <TopLine>25</TopLine>
+          <CurrentLine>33</CurrentLine>
         </Doc>
         <Doc>
           <Name>C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_gpio.h</Name>

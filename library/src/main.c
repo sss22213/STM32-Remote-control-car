@@ -26,12 +26,11 @@
 		systick_configature();
 		TM2_init();
 		MPU6050_Init();
-		;
 		while(1)
 		{ 
 		 	//L298N_Control(1);
 			//Delay_Ms(1000);
-			USART_SendData(USART1,I2C_ReadByte(0xD0,0x41));
+			USART_SendData(USART1,I2C_ReadByte(0xD0,0x3B));
 			//L298N_Control(4);
 			Delay_S(1);		
 			
@@ -449,6 +448,11 @@
 
 		//停止訊號
 		I2C_GenerateSTOP(I2C1,ENABLE);
+
+		 /* Clear AF flag */
+        I2C_ClearFlag(I2C1, I2C_FLAG_AF);
+        /* STOP condition */    
+        I2C_GenerateSTOP(I2C1, ENABLE);  
 	}
 	u8 I2C_ReadByte(u8 DeviceAddress,u8 MemoryAddress)
 	{
@@ -479,16 +483,16 @@
 		I2C_Send7bitAddress(I2C1,DeviceAddress,I2C_Direction_Receiver);
 		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)!=SUCCESS);
 		
+		I2C_AcknowledgeConfig(I2C1,DISABLE); //ACK 關閉	
+		
+		//停止訊號
+		I2C_GenerateSTOP(I2C1,ENABLE);
+
 		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)!=SUCCESS);
 
 		data=I2C_ReceiveData(I2C1);			//接收資料
 		
-		//I2C_AcknowledgeConfig(I2C1,DISABLE); //ACK 關閉	
-		
-		//停止訊號
-		I2C_GenerateSTOP(I2C1,ENABLE);
-		
-		I2C_AcknowledgeConfig(I2C1,ENABLE); //ACK 關閉	
+		I2C_AcknowledgeConfig(I2C1,ENABLE); 	
 	
 		return data;		
 	
