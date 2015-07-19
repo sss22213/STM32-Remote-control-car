@@ -190,7 +190,7 @@
 
   <Group>
     <GroupName>boot</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
@@ -274,7 +274,7 @@
       <GroupNumber>2</GroupNumber>
       <FileNumber>6</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -358,7 +358,7 @@
 
   <Group>
     <GroupName>interrupt</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
@@ -367,10 +367,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>2</ColumnNumber>
+      <ColumnNumber>25</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>178</TopLine>
-      <CurrentLine>178</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>19</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\interrupt\stm32f10x_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_it.c</FilenameWithoutPath>
@@ -393,29 +393,148 @@
 
   <Group>
     <GroupName>src</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
       <GroupNumber>4</GroupNumber>
       <FileNumber>14</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>47</ColumnNumber>
+      <ColumnNumber>23</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>25</TopLine>
-      <CurrentLine>33</CurrentLine>
+      <TopLine>16</TopLine>
+      <CurrentLine>28</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\library\src\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
     </File>
   </Group>
 
+  <Group>
+    <GroupName>user</GroupName>
+    <tvExp>1</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>15</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\I2C.h</PathWithFileName>
+      <FilenameWithoutPath>I2C.h</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>16</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\I2C.c</PathWithFileName>
+      <FilenameWithoutPath>I2C.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>17</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>45</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>24</TopLine>
+      <CurrentLine>40</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\MPU6050.c</PathWithFileName>
+      <FilenameWithoutPath>MPU6050.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>18</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\MPU6050.h</PathWithFileName>
+      <FilenameWithoutPath>MPU6050.h</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>19</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\Delay.c</PathWithFileName>
+      <FilenameWithoutPath>Delay.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>20</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\Delay.h</PathWithFileName>
+      <FilenameWithoutPath>Delay.h</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>21</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>8</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>21</TopLine>
+      <CurrentLine>46</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\USART.c</PathWithFileName>
+      <FilenameWithoutPath>USART.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>22</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\user\USART.h</PathWithFileName>
+      <FilenameWithoutPath>USART.h</FilenameWithoutPath>
+    </File>
+  </Group>
+
   <AlienFiles>
-    <PathWithFilename>C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_gpio.h</PathWithFilename>
-    <TopLine>13</TopLine>
-    <CurrentLine>13</CurrentLine>
+    <PathWithFilename>C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_usart.h</PathWithFilename>
+    <TopLine>221</TopLine>
+    <CurrentLine>240</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -2029,31 +2148,49 @@
     <ActiveMDIGroup>0</ActiveMDIGroup>
     <MDIGroup>
       <Size>100</Size>
-      <ActiveTab>1</ActiveTab>
+      <ActiveTab>4</ActiveTab>
       <Documents>
         <Doc>
-          <Name>.\interrupt\stm32f10x_it.c</Name>
-          <ColumnNumber>2</ColumnNumber>
-          <TopLine>178</TopLine>
-          <CurrentLine>178</CurrentLine>
-        </Doc>
-        <Doc>
           <Name>.\library\src\main.c</Name>
-          <ColumnNumber>47</ColumnNumber>
-          <TopLine>25</TopLine>
-          <CurrentLine>33</CurrentLine>
+          <ColumnNumber>23</ColumnNumber>
+          <TopLine>16</TopLine>
+          <CurrentLine>28</CurrentLine>
         </Doc>
         <Doc>
-          <Name>C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_gpio.h</Name>
-          <ColumnNumber>32</ColumnNumber>
-          <TopLine>13</TopLine>
-          <CurrentLine>13</CurrentLine>
+          <Name>.\user\MPU6050.c</Name>
+          <ColumnNumber>45</ColumnNumber>
+          <TopLine>24</TopLine>
+          <CurrentLine>40</CurrentLine>
         </Doc>
         <Doc>
-          <Name>.\library\src\stm32f10x_i2c.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>151</TopLine>
-          <CurrentLine>151</CurrentLine>
+          <Name>.\user\MPU6050.h</Name>
+          <ColumnNumber>28</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>5</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\user\Delay.h</Name>
+          <ColumnNumber>18</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>2</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\user\USART.c</Name>
+          <ColumnNumber>8</ColumnNumber>
+          <TopLine>21</TopLine>
+          <CurrentLine>46</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>.\user\USART.h</Name>
+          <ColumnNumber>56</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>10</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_usart.h</Name>
+          <ColumnNumber>21</ColumnNumber>
+          <TopLine>221</TopLine>
+          <CurrentLine>240</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

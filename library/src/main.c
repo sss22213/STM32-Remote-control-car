@@ -1,24 +1,18 @@
 	#include "STM32f10x_lib.h"
-
+	#include "I2C.h"
+	#include "MPU6050.h"
+	#include "Delay.h"
+	#include "USART.h"
 	void delay(int);	
 	void  RCC_Configuration(void);
 	void  GPIO_Configurataion(void);
-	void  USART_Configurataion(void);
 	void  TM2_init(void);
 	void  NVIC_Configuration(void);
-	void systick_configature(void);
-	void Delay_Ms(int ms);
-	void Delay_us(int us);
-	void Delay_S(int s);
 	void L298N_Control(int Command);
-	void MPU6050_Init(void);
-	void I2C_WriteByte(u8 DeviceAddress,u8 MemoryAddress,u8 data);
-	u8 I2C_ReadByte(u8 DeviceAddress,u8 MemoryAddress);
 	int HCSR04_TRIG(void);
 	extern int count; //計數值
 	int main()
 	{	  
-			
 		RCC_Configuration();
 		GPIO_Configurataion();
 		NVIC_Configuration();
@@ -30,7 +24,8 @@
 		{ 
 		 	//L298N_Control(1);
 			//Delay_Ms(1000);
-			USART_SendData(USART1,I2C_ReadByte(0xD0,0x3B));
+			
+			USART_SendData(USART1,MPU6050_Temp());
 			//L298N_Control(4);
 			Delay_S(1);		
 			
@@ -211,8 +206,6 @@
 
 		//大約1us中斷一次
 		TIM_TimeBaseInitTypeDef TIM_Basestruct;
-
-//		TIM_ICInitTypeDef TIM_ICInitStructure;
 		
 		TIM_Basestruct.TIM_Prescaler=5.500;
 		TIM_Basestruct.TIM_CounterMode=TIM_CounterMode_Up;
@@ -227,53 +220,6 @@
 
 
 	
-	}
-	/*********************************************/
-	/*NAME:			systick_configature			**/
-	/*INPUT:		NULL						**/
-	/*RETURN:		NULL						**/
-	/*********************************************/
-	void systick_configature()
-	{
-	   SysTick_CounterCmd(SysTick_Counter_Disable);
-	   SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK_Div8);
-	   SysTick_CounterCmd(SysTick_Counter_Clear);
-	   
-	}
-	/*********************************************/
-	/*NAME:			Delay_Ms					**/
-	/*INPUT:		int ms						**/
-	/*RETURN:		NULL						**/
-	/*********************************************/
-	void Delay_Ms(int ms)
-	{
-		SysTick_SetReload(9000*ms);
-		SysTick_CounterCmd(SysTick_Counter_Enable);
-		while(SysTick_GetFlagStatus(SysTick_FLAG_COUNT)==0);
-		SysTick_CounterCmd(SysTick_Counter_Disable);	
-		SysTick_CounterCmd(SysTick_Counter_Clear);	
-	}
-	void Delay_S(int s)
-	{
-		
-		for(;s>0;s--)
-		{
-			Delay_Ms(1000);
-			
-		}
-	}
-	/*********************************************/
-	/*NAME:			Delay_us					**/
-	/*INPUT:		int us						**/
-	/*RETURN:		NULL						**/
-	/*********************************************/
-	void Delay_us(int us)
-	{
-		SysTick_SetReload(9*us);
-		SysTick_CounterCmd(SysTick_Counter_Enable);
-		while(SysTick_GetFlagStatus(SysTick_FLAG_COUNT)==0);
-		SysTick_CounterCmd(SysTick_Counter_Disable);	
-		SysTick_CounterCmd(SysTick_Counter_Clear);	
 	}
 	/*********************************************/
 	/*NAME:			HCSR04_TRIG					**/
@@ -304,36 +250,6 @@
 		 
 
 	
-	}
-	/*********************************************/
-	/*NAME:			USART_Configurataion		**/
-	/*INPUT:		NULL						**/
-	/*RETURN:		NULL						**/
-	/*9600,N81									**/
-	/*********************************************/
-	void USART_Configurataion(void)
-	{
-		//USART_Init
-		USART_InitTypeDef UART;
-
-		//USART_ClockInitTypeDef UART_Clock;
-
-		UART.USART_BaudRate=9600;
-
-		UART.USART_WordLength=USART_WordLength_8b;
-
-		UART.USART_StopBits=USART_StopBits_1;
-  		
-		UART.USART_Parity=USART_Parity_No;
-  		
-		UART.USART_Mode=USART_Mode_Rx | USART_Mode_Tx;
-
-		UART.USART_HardwareFlowControl=USART_HardwareFlowControl_None;
-
-  		USART_Init(USART1,&UART);
-
-		USART_Cmd(USART1,ENABLE);
-			
 	}
 	/*********************************************/
 	/*NAME:			L298N_Control				**/
@@ -380,121 +296,7 @@
 		}
 
 	}
-	void MPU6050_Init(void)
-	{
-		
-		//u8 BUF;
-		I2C_InitTypeDef I2C_Con;
-		
-		I2C_Con.I2C_Mode=I2C_Mode_I2C;
- 		I2C_Con.I2C_DutyCycle=I2C_DutyCycle_2;
-		I2C_Con.I2C_OwnAddress1=0xA0;
-		I2C_Con.I2C_Ack=I2C_Ack_Enable;
-		I2C_Con.I2C_AcknowledgedAddress=I2C_AcknowledgedAddress_7bit;
-		I2C_Con.I2C_ClockSpeed=50000;
-
-	
-		I2C_Init(I2C1,&I2C_Con);
-		I2C_Cmd(I2C1,ENABLE);
-		I2C_AcknowledgeConfig(I2C1,ENABLE);
-
-		Delay_Ms(1000);
-
-		I2C_WriteByte(0xD0,0x6B,0x80);
-		
-		Delay_Ms(200);
-
-		I2C_WriteByte(0xD0,0x6B,0x00);
-
-		Delay_Ms(200);
-	 
-	    I2C_WriteByte(0xD0,0x19,0x07);  //SMPLRT_DIV
-		  
-		
-
-		I2C_WriteByte(0xD0,0x1A,0x06);  //Config
-
-		 
-		I2C_WriteByte(0xD0,0x1B,0x18);  //GYRO_CONFIG
-	
-	   	I2C_WriteByte(0xD0,0x1C,0x01);  //ACCEL_CONFIG
-		
-	
-	
-		
-	}
-	void I2C_WriteByte(u8 DeviceAddress,u8 MemoryAddress,u8 data)
-	{
-		
-		//等待I2C閒置
-		while(I2C_GetFlagStatus(I2C1,I2C_FLAG_BUSY));
-		
-		//啟動訊號
-		I2C_GenerateSTART(I2C1,ENABLE);	
-		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)!=SUCCESS);
-
-		//發送裝置位置
-		I2C_Send7bitAddress(I2C1,DeviceAddress,I2C_Direction_Transmitter);
-		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)!=SUCCESS);
 
 
-		//發送記憶體位置
-		I2C_SendData(I2C1,MemoryAddress);
-		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)!=SUCCESS);
 
-		//發送數據
-		I2C_SendData(I2C1,data);
-		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)!=SUCCESS);
-
-		//停止訊號
-		I2C_GenerateSTOP(I2C1,ENABLE);
-
-		 /* Clear AF flag */
-        I2C_ClearFlag(I2C1, I2C_FLAG_AF);
-        /* STOP condition */    
-        I2C_GenerateSTOP(I2C1, ENABLE);  
-	}
-	u8 I2C_ReadByte(u8 DeviceAddress,u8 MemoryAddress)
-	{
-		
-		u8 data;
-
-		//等待I2C閒置
-		while(I2C_GetFlagStatus(I2C1,I2C_FLAG_BUSY));
-		
-		//啟動訊號
-		I2C_GenerateSTART(I2C1,ENABLE);	
-		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)!=SUCCESS);
-
-		//發送裝置位置
-		I2C_Send7bitAddress(I2C1,DeviceAddress,I2C_Direction_Transmitter);
-		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)!=SUCCESS);
-		I2C_Cmd(I2C1,ENABLE);
-
-		//發送記憶體位置
-		I2C_SendData(I2C1,MemoryAddress);
-		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_TRANSMITTED)!=SUCCESS);
-
-		//啟動訊號
-		I2C_GenerateSTART(I2C1,ENABLE);	
-		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_MODE_SELECT)!=SUCCESS);
-		
-		//發送裝置位置
-		I2C_Send7bitAddress(I2C1,DeviceAddress,I2C_Direction_Receiver);
-		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED)!=SUCCESS);
-		
-		I2C_AcknowledgeConfig(I2C1,DISABLE); //ACK 關閉	
-		
-		//停止訊號
-		I2C_GenerateSTOP(I2C1,ENABLE);
-
-		while(I2C_CheckEvent(I2C1,I2C_EVENT_MASTER_BYTE_RECEIVED)!=SUCCESS);
-
-		data=I2C_ReceiveData(I2C1);			//接收資料
-		
-		I2C_AcknowledgeConfig(I2C1,ENABLE); 	
-	
-		return data;		
-	
-	}	
 	

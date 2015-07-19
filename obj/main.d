@@ -27,3 +27,7 @@
 .\obj\main.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_tim.h
 .\obj\main.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_usart.h
 .\obj\main.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_wwdg.h
+.\obj\main.o: .\user\I2C.h
+.\obj\main.o: .\user\MPU6050.h
+.\obj\main.o: .\user\Delay.h
+.\obj\main.o: .\user\USART.h

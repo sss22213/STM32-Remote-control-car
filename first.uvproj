@@ -345,7 +345,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\STM32_FW</IncludePath>
+              <IncludePath>..\STM32_FW;.\user</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -469,6 +469,51 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\library\src\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>user</GroupName>
+          <Files>
+            <File>
+              <FileName>I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\I2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>MPU6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\MPU6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>MPU6050.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\MPU6050.h</FilePath>
+            </File>
+            <File>
+              <FileName>Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\Delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>Delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\Delay.h</FilePath>
+            </File>
+            <File>
+              <FileName>USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\USART.c</FilePath>
+            </File>
+            <File>
+              <FileName>USART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\USART.h</FilePath>
             </File>
           </Files>
         </Group>
