@@ -31,3 +31,4 @@
 .\obj\main.o: .\user\MPU6050.h
 .\obj\main.o: .\user\Delay.h
 .\obj\main.o: .\user\USART.h
+.\obj\main.o: C:\Keil\ARM\RV31\INC\math.h

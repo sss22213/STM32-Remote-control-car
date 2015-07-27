@@ -3,6 +3,7 @@
 	#include "MPU6050.h"
 	#include "Delay.h"
 	#include "USART.h"
+	#include <math.h>
 	void delay(int);	
 	void  RCC_Configuration(void);
 	void  GPIO_Configurataion(void);
@@ -10,9 +11,16 @@
 	void  NVIC_Configuration(void);
 	void L298N_Control(int Command);
 	int HCSR04_TRIG(void);
+	char* HC05_AT(char* command);
+	//int speed(void);		  
 	extern int count; //­p¼Æ­È
+	//flag
+	int flag_disabled=0;
+	/*speed
+	float t1,t2=0;
+	float Vxo=0,Vyo=0,Vzo=0,Vx1=0,Vx2=0,Vx3=0,V;*/
 	int main()
-	{	  
+	{	 
 		RCC_Configuration();
 		GPIO_Configurataion();
 		NVIC_Configuration();
@@ -22,15 +30,9 @@
 		MPU6050_Init();
 		while(1)
 		{ 
-		 	//L298N_Control(1);
-			//Delay_Ms(1000);
-			
-			USART_SendData(USART1,MPU6050_Temp());
-			//L298N_Control(4);
-			Delay_S(1);		
-			
-			//USART_SendData(USART1,0x02);
-				
+		 
+			USART_Sendstring(USART1,HC05_AT("AT\r\n"));
+			Delay_S(1);
 		} 
 		
 
@@ -69,7 +71,7 @@
 
 			while(RCC_GetSYSCLKSource()!=0x08);
 		 
-			RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2|RCC_APB1Periph_I2C1,ENABLE);
+			RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2|RCC_APB1Periph_USART3|RCC_APB1Periph_I2C1,ENABLE);
 
 		 
 			RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1|RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOB|RCC_APB2Periph_GPIOC|RCC_APB2Periph_AFIO,ENABLE);
@@ -117,6 +119,7 @@
 
 		GPIO_Init(GPIOA,&g);
 
+		//USART1
 	    //TX,PA9
 		g.GPIO_Pin=GPIO_Pin_9;
 
@@ -136,7 +139,25 @@
 
 		GPIO_Init(GPIOA,&g);	  
 				  
+	   	//USART3
+	    //TX,PB10
+		g.GPIO_Pin=GPIO_Pin_10;
 
+		g.GPIO_Mode=GPIO_Mode_AF_PP;
+
+		g.GPIO_Speed=GPIO_Speed_50MHz;
+
+		GPIO_Init(GPIOB,&g);
+
+		//RX,PB11	
+
+		g.GPIO_Pin=GPIO_Pin_11;
+
+		g.GPIO_Mode=GPIO_Mode_IN_FLOATING;
+
+		g.GPIO_Speed=GPIO_Speed_50MHz;
+
+		GPIO_Init(GPIOB,&g);	  
 
 		//Moto_Control,PC1,PC3,PC7,PC9
 
@@ -296,6 +317,33 @@
 		}
 
 	}
+	/*********************************************/
+	/*NAME:			HC05_AT						**/
+	/*INPUT:		char* command				**/
+	/*RETURN:		char*						**/
+	/*********************************************/
+	char* HC05_AT(char* command)
+	{
+		USART_Sendstring(USART3,command);
+		return USART_Readstring(USART3,2);				
+	}
+	/*int speed(void)
+	{
+		//parmeter
+		float T=0;
+		t2=count;
+		T=t2-t1;
+
+		//calue
+		V=sqrt(pow(Vxo+MPU6050_ACCEL_XOUT_M2s()*T,2)+pow(Vyo+MPU6050_ACCEL_YOUT_M2s()*T,2)+pow(Vzo+MPU6050_ACCEL_ZOUT_M2s()*T,2));
+		
+		//restore
+		Vxo=MPU6050_ACCEL_XOUT_M2s();
+		Vyo=MPU6050_ACCEL_YOUT_M2s();
+		Vzo=MPU6050_ACCEL_ZOUT_M2s();			
+		t1=t2;
+		return V;
+	}*/ 
 
 
 
