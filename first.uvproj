@@ -159,7 +159,7 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4100</DriverSelection>
+            <DriverSelection>4099</DriverSelection>
           </Flash1>
           <Flash2>Segger\JL2CM3.dll</Flash2>
           <Flash3>"" ()</Flash3>
@@ -345,7 +345,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\STM32_FW;.\user</IncludePath>
+              <IncludePath>..\STM32_FW;.\user;.\user\MPU6050</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -476,24 +476,14 @@
           <GroupName>user</GroupName>
           <Files>
             <File>
-              <FileName>I2C.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\user\I2C.h</FilePath>
-            </File>
-            <File>
-              <FileName>I2C.c</FileName>
+              <FileName>AT24C02.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\user\I2C.c</FilePath>
+              <FilePath>.\user\AT24C02.c</FilePath>
             </File>
             <File>
-              <FileName>MPU6050.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\user\MPU6050.c</FilePath>
-            </File>
-            <File>
-              <FileName>MPU6050.h</FileName>
+              <FileName>AT24C02.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\user\MPU6050.h</FilePath>
+              <FilePath>.\user\AT24C02.h</FilePath>
             </File>
             <File>
               <FileName>Delay.c</FileName>
@@ -506,6 +496,26 @@
               <FilePath>.\user\Delay.h</FilePath>
             </File>
             <File>
+              <FileName>I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\I2C.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\I2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>MPU6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\MPU6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>MPU6050.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\MPU6050.h</FilePath>
+            </File>
+            <File>
               <FileName>USART.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\user\USART.c</FilePath>
@@ -514,6 +524,36 @@
               <FileName>USART.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\user\USART.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>MPU6050_DMP</GroupName>
+          <Files>
+            <File>
+              <FileName>anbt_dmp_driver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\MPU6050\anbt_dmp_driver.c</FilePath>
+            </File>
+            <File>
+              <FileName>anbt_dmp_driver.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\MPU6050\anbt_dmp_driver.h</FilePath>
+            </File>
+            <File>
+              <FileName>anbt_dmp_fun.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\MPU6050\anbt_dmp_fun.h</FilePath>
+            </File>
+            <File>
+              <FileName>anbt_dmp_mpu6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\MPU6050\anbt_dmp_mpu6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>anbt_dmp_mpu6050.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\MPU6050\anbt_dmp_mpu6050.h</FilePath>
             </File>
           </Files>
         </Group>

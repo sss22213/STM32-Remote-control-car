@@ -3,24 +3,39 @@
 	#include "MPU6050.h"
 	#include "Delay.h"
 	#include "USART.h"
+	#include "AT24C02.h"
+	#include "anbt_dmp_fun.h"
+	#include "anbt_dmp_mpu6050.h"
+	#include "anbt_dmp_driver.h"
 	#include <math.h>
+	#define q30  1073741824.0f
 	void delay(int);	
 	void  RCC_Configuration(void);
 	void  GPIO_Configurataion(void);
 	void  TM2_init(void);
 	void  NVIC_Configuration(void);
 	void L298N_Control(int Command);
+	//void niming(int16_t num,int16_t num2);
 	int HCSR04_TRIG(void);
 	char* HC05_AT(char* command);
-	//int speed(void);		  
+	int speed(void);		  
 	extern int count; //­p¼Æ­È
-	//flag
-	int flag_disabled=0;
-	/*speed
-	float t1,t2=0;
-	float Vxo=0,Vyo=0,Vzo=0,Vx1=0,Vx2=0,Vx3=0,V;*/
+	//speed
+	float Vxo=0,Vyo=0,Vzo=0,Vx1=0,Vy1=0,Vz1=0;
+	float q0=1.0f,q1=0.0f,q2=0.0f,q3=0.0f;
+	int V=0;
 	int main()
-	{	 
+	{	
+
+
+		unsigned long sensor_timestamp;
+		short gyro[3], accel[3], sensors;
+		unsigned char more;
+		long quat[4];
+		float Yaw=0.00;
+	   	float Roll,Pitch;
+		int a=0,b=0,c=0;
+
 		RCC_Configuration();
 		GPIO_Configurataion();
 		NVIC_Configuration();
@@ -28,15 +43,31 @@
 		systick_configature();
 		TM2_init();
 		MPU6050_Init();
-		while(1)
-		{ 
-		 
-			USART_Sendstring(USART1,HC05_AT("AT\r\n"));
-			Delay_S(1);
-		} 
-		
+		Delay_Ms(20);
+		//SART_SendData(USART1,AnBT_DMP_MPU6050_Init());
 
+		a=dmp_read_fifo(gyro, accel, quat, &sensor_timestamp, &sensors,&more); 
+		USART_SendData(USART1,a);	
+		  
+		if (sensors & INV_WXYZ_QUAT )
+		{
+		
+	 	 q0=quat[0] / q30;
+		 q1=quat[1] / q30;
+		 q2=quat[2] / q30;
+		 q3=quat[3] / q30;
+		 Pitch = asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3; // pitch
+ 		 Roll = atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3; 
+		 Yaw = 	atan2(2*(q1*q2 + q0*q3),q0*q0+q1*q1-q2*q2-q3*q3) * 57.3;				
+		 a=Pitch*100;
+		 b=Roll*100;	 
+		
+	 	}	
+		
+		
+			   
 	}
+
 	void  RCC_Configuration(void)
 	{
 		ErrorStatus HSEStartUpStatus;
@@ -327,23 +358,35 @@
 		USART_Sendstring(USART3,command);
 		return USART_Readstring(USART3,2);				
 	}
-	/*int speed(void)
+	int speed(void)
 	{
 		//parmeter
 		float T=0;
+		float t1,t2=0;
+		float	Temp=0;
 		t2=count;
 		T=t2-t1;
 
 		//calue
-		V=sqrt(pow(Vxo+MPU6050_ACCEL_XOUT_M2s()*T,2)+pow(Vyo+MPU6050_ACCEL_YOUT_M2s()*T,2)+pow(Vzo+MPU6050_ACCEL_ZOUT_M2s()*T,2));
-		
+		Temp=MPU6050_ACCEL_XOUT_M2s();
+		Vx1=(Vxo+Temp*T);
+
+		Temp=MPU6050_ACCEL_YOUT_M2s();
+		Vy1=(Vyo+Temp*T);
+
+		Temp=MPU6050_ACCEL_ZOUT_M2s();
+		Vz1=(Vzo+Temp*T);
+
+		//V=sqrt(Vx1*Vx1+Vy1*Vy1+Vz1*Vz1);
+		V=sqrt(Vx1*Vx1)-0xA0;
 		//restore
 		Vxo=MPU6050_ACCEL_XOUT_M2s();
 		Vyo=MPU6050_ACCEL_YOUT_M2s();
 		Vzo=MPU6050_ACCEL_ZOUT_M2s();			
 		t1=t2;
+
 		return V;
-	}*/ 
+	}  
 
 
 

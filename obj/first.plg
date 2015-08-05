@@ -4,43 +4,544 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 D:\project\STM32\project\research\first.uvproj
-Project File Date:  07/19/2015
+Project File Date:  08/05/2015
 
 <h2>Output:</h2>
 Build target 'first'
-compiling main.c...
-library\src\main.c(35): error:  #167: argument of type "char *" is incompatible with parameter of type "u16"
-library\src\main.c(341): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'first'
-compiling main.c...
-library\src\main.c(341): warning:  #1-D: last line of file ends without a newline
-compiling USART.c...
 linking...
-Program Size: Code=12766 RO-data=290 RW-data=24 ZI-data=568  
-FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
-Build target 'first'
-compiling USART.c...
-user\USART.c(73): error:  #513: a value of type "char *" cannot be assigned to an entity of type "char"
-Target not created
-Build target 'first'
-compiling USART.c...
-user\USART.c(72): error:  #513: a value of type "char *" cannot be assigned to an entity of type "char"
-Target not created
-Build target 'first'
-compiling USART.c...
-linking...
-Program Size: Code=12774 RO-data=290 RW-data=24 ZI-data=568  
+Program Size: Code=25596 RO-data=3432 RW-data=144 ZI-data=600  
 FromELF: creating hex file...
 ".\obj\first.axf" - 0 Error(s), 0 Warning(s).
 Build target 'first'
-compiling main.c...
-library\src\main.c(357): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=12798 RO-data=290 RW-data=24 ZI-data=568  
+Program Size: Code=25596 RO-data=3432 RW-data=144 ZI-data=600  
 FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
+".\obj\first.axf" - 0 Error(s), 0 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+No Algorithm found for: 08004000H - 080071F3H
+Partial Programming Done (areas with no algorithms skipped!)
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+No Algorithm found for: 08004000H - 080071F3H
+Partial Programming Done (areas with no algorithms skipped!)
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(365): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=14320 RO-data=288 RW-data=68 ZI-data=564  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 2 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(365): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=25604 RO-data=3432 RW-data=144 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 2 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+No Algorithm found for: 08004000H - 080071FBH
+Partial Programming Done (areas with no algorithms skipped!)
+Build target 'first'
+linking...
+Program Size: Code=25604 RO-data=3432 RW-data=144 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 0 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+No Algorithm found for: 08004000H - 080071FBH
+Partial Programming Done (areas with no algorithms skipped!)
+Build target 'first'
+linking...
+Program Size: Code=25604 RO-data=3432 RW-data=144 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 0 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(365): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=14320 RO-data=288 RW-data=68 ZI-data=564  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 2 Warning(s).
 Build target 'first'
 assembling STM32F10x.s...
 compiling stm32f10x_gpio.c...
@@ -55,22 +556,341 @@ compiling stm32f10x_exti.c...
 compiling stm32f10x_i2c.c...
 compiling stm32f10x_it.c...
 compiling main.c...
-library\src\main.c(357): warning:  #1-D: last line of file ends without a newline
-compiling I2C.c...
-compiling MPU6050.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(365): warning:  #1-D: last line of file ends without a newline
+compiling AT24C02.c...
+user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
 compiling Delay.c...
+compiling I2C.c...
+user\I2C.c(167): warning:  #1-D: last line of file ends without a newline
+compiling MPU6050.c...
 compiling USART.c...
+compiling anbt_dmp_driver.c...
+compiling anbt_dmp_mpu6050.c...
 linking...
-Program Size: Code=12798 RO-data=290 RW-data=24 ZI-data=568  
+Program Size: Code=14320 RO-data=288 RW-data=68 ZI-data=564  
 FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
+".\obj\first.axf" - 0 Error(s), 4 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Build target 'first'
+linking...
+Program Size: Code=14320 RO-data=288 RW-data=68 ZI-data=564  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 0 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
 Build target 'first'
 compiling main.c...
-library\src\main.c(351): warning:  #1-D: last line of file ends without a newline
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(365): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=12798 RO-data=290 RW-data=24 ZI-data=568  
+Program Size: Code=25604 RO-data=3432 RW-data=144 ZI-data=600  
 FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
+".\obj\first.axf" - 0 Error(s), 2 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(51): error:  #20: identifier "q0" is undefined
+library\src\main.c(51): error:  #20: identifier "q30" is undefined
+library\src\main.c(52): error:  #20: identifier "q1" is undefined
+library\src\main.c(53): error:  #20: identifier "q2" is undefined
+library\src\main.c(54): error:  #20: identifier "q3" is undefined
+library\src\main.c(57): error:  #29: expected an expression
+library\src\main.c(60): warning:  #223-D: function "niming" declared implicitly
+library\src\main.c(32): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(33): warning:  #550-D: variable "Pitch" was set but never used
+library\src\main.c(34): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(66): error:  #159: declaration is incompatible with previous "niming" (declared at line 60)
+library\src\main.c(72): warning:  #223-D: function "USART1_SendData" declared implicitly
+library\src\main.c(405): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(52): error:  #20: identifier "q0" is undefined
+library\src\main.c(52): error:  #20: identifier "q30" is undefined
+library\src\main.c(53): error:  #20: identifier "q1" is undefined
+library\src\main.c(54): error:  #20: identifier "q2" is undefined
+library\src\main.c(55): error:  #20: identifier "q3" is undefined
+library\src\main.c(58): error:  #29: expected an expression
+library\src\main.c(33): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(34): warning:  #550-D: variable "Pitch" was set but never used
+library\src\main.c(35): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(73): warning:  #223-D: function "USART1_SendData" declared implicitly
+library\src\main.c(406): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(53): error:  #20: identifier "q30" is undefined
+library\src\main.c(59): error:  #29: expected an expression
+library\src\main.c(34): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(35): warning:  #550-D: variable "Pitch" was set but never used
+library\src\main.c(36): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(74): warning:  #223-D: function "USART1_SendData" declared implicitly
+library\src\main.c(407): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(53): error:  #20: identifier "q30" is undefined
+library\src\main.c(34): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(36): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(74): warning:  #223-D: function "USART1_SendData" declared implicitly
+library\src\main.c(407): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(53): error:  #20: identifier "q30" is undefined
+library\src\main.c(34): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(36): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(74): warning:  #223-D: function "USART1_SendData" declared implicitly
+library\src\main.c(407): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(53): error:  #20: identifier "q30" is undefined
+library\src\main.c(34): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(36): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(74): warning:  #223-D: function "USART1_SendData" declared implicitly
+library\src\main.c(407): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(75): warning:  #223-D: function "USART1_SendData" declared implicitly
+library\src\main.c(408): warning:  #1-D: last line of file ends without a newline
+linking...
+.\obj\first.axf: Error: L6218E: Undefined symbol USART1_SendData (referred from main.o).
+Target not created
 Build target 'first'
 assembling STM32F10x.s...
 compiling stm32f10x_gpio.c...
@@ -85,29 +905,529 @@ compiling stm32f10x_exti.c...
 compiling stm32f10x_i2c.c...
 compiling stm32f10x_it.c...
 compiling main.c...
-library\src\main.c(351): warning:  #1-D: last line of file ends without a newline
-compiling I2C.c...
-compiling MPU6050.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(408): warning:  #1-D: last line of file ends without a newline
+compiling AT24C02.c...
+user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
 compiling Delay.c...
+compiling I2C.c...
+user\I2C.c(167): warning:  #1-D: last line of file ends without a newline
+compiling MPU6050.c...
 compiling USART.c...
+compiling anbt_dmp_driver.c...
+compiling anbt_dmp_mpu6050.c...
 linking...
-Program Size: Code=12798 RO-data=290 RW-data=24 ZI-data=568  
+Program Size: Code=28144 RO-data=3672 RW-data=160 ZI-data=600  
 FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
+".\obj\first.axf" - 0 Error(s), 6 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
 Build target 'first'
 compiling main.c...
-library\src\main.c(351): warning:  #1-D: last line of file ends without a newline
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(408): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=12798 RO-data=290 RW-data=24 ZI-data=568  
+Program Size: Code=28152 RO-data=3672 RW-data=160 ZI-data=600  
 FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
+".\obj\first.axf" - 0 Error(s), 4 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
 Build target 'first'
 compiling main.c...
-library\src\main.c(352): warning:  #1-D: last line of file ends without a newline
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(408): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=12794 RO-data=290 RW-data=24 ZI-data=568  
+Program Size: Code=28160 RO-data=3672 RW-data=160 ZI-data=600  
 FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
+".\obj\first.axf" - 0 Error(s), 4 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(408): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=28160 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 4 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(409): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=28164 RO-data=3676 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 4 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(410): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=28160 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 4 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
 Build target 'first'
 assembling STM32F10x.s...
 compiling stm32f10x_gpio.c...
@@ -122,56 +1442,207 @@ compiling stm32f10x_exti.c...
 compiling stm32f10x_i2c.c...
 compiling stm32f10x_it.c...
 compiling main.c...
-library\src\main.c(352): warning:  #1-D: last line of file ends without a newline
-compiling I2C.c...
-compiling MPU6050.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(410): warning:  #1-D: last line of file ends without a newline
+compiling AT24C02.c...
+user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
 compiling Delay.c...
-compiling USART.c...
-linking...
-Program Size: Code=12794 RO-data=290 RW-data=24 ZI-data=568  
-FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
-Build target 'first'
-compiling main.c...
-library\src\main.c(352): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=12810 RO-data=290 RW-data=24 ZI-data=568  
-FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
-Build target 'first'
-compiling main.c...
-library\src\main.c(350): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=12802 RO-data=290 RW-data=24 ZI-data=568  
-FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
-Build target 'first'
-assembling STM32F10x.s...
-compiling stm32f10x_gpio.c...
-compiling stm32f10x_lib.c...
-compiling stm32f10x_rcc.c...
-compiling stm32f10x_flash.c...
-compiling stm32f10x_usart.c...
-compiling stm32f10x_nvic.c...
-compiling stm32f10x_tim.c...
-compiling stm32f10x_systick.c...
-compiling stm32f10x_exti.c...
-compiling stm32f10x_i2c.c...
-compiling stm32f10x_it.c...
-compiling main.c...
-library\src\main.c(350): warning:  #1-D: last line of file ends without a newline
 compiling I2C.c...
+user\I2C.c(167): warning:  #1-D: last line of file ends without a newline
 compiling MPU6050.c...
-compiling Delay.c...
 compiling USART.c...
+compiling anbt_dmp_driver.c...
+compiling anbt_dmp_mpu6050.c...
 linking...
-Program Size: Code=12802 RO-data=290 RW-data=24 ZI-data=568  
+Program Size: Code=28160 RO-data=3672 RW-data=160 ZI-data=600  
 FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
+".\obj\first.axf" - 0 Error(s), 6 Warning(s).
 Build target 'first'
-compiling USART.c...
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "a" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "b" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(392): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=12802 RO-data=290 RW-data=24 ZI-data=568  
+Program Size: Code=28000 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 6 Warning(s).
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "a" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "b" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(392): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=28000 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 6 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+linking...
+Program Size: Code=28000 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 0 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+linking...
+Program Size: Code=28000 RO-data=3672 RW-data=160 ZI-data=600  
 FromELF: creating hex file...
 ".\obj\first.axf" - 0 Error(s), 0 Warning(s).
 Build target 'first'
@@ -188,12 +1659,698 @@ compiling stm32f10x_exti.c...
 compiling stm32f10x_i2c.c...
 compiling stm32f10x_it.c...
 compiling main.c...
-library\src\main.c(350): warning:  #1-D: last line of file ends without a newline
-compiling I2C.c...
-compiling MPU6050.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "a" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "b" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(392): warning:  #1-D: last line of file ends without a newline
+compiling AT24C02.c...
+user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
 compiling Delay.c...
+compiling I2C.c...
+user\I2C.c(167): warning:  #1-D: last line of file ends without a newline
+compiling MPU6050.c...
 compiling USART.c...
+compiling anbt_dmp_driver.c...
+compiling anbt_dmp_mpu6050.c...
 linking...
-Program Size: Code=12802 RO-data=290 RW-data=24 ZI-data=568  
+Program Size: Code=28000 RO-data=3672 RW-data=160 ZI-data=600  
 FromELF: creating hex file...
-".\obj\first.axf" - 0 Error(s), 1 Warning(s).
+".\obj\first.axf" - 0 Error(s), 8 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "a" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "b" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(392): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=28008 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 6 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+assembling STM32F10x.s...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_nvic.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_systick.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_i2c.c...
+compiling stm32f10x_it.c...
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "a" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "b" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(392): warning:  #1-D: last line of file ends without a newline
+compiling AT24C02.c...
+user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+compiling Delay.c...
+compiling I2C.c...
+user\I2C.c(167): warning:  #1-D: last line of file ends without a newline
+compiling MPU6050.c...
+compiling USART.c...
+compiling anbt_dmp_driver.c...
+compiling anbt_dmp_mpu6050.c...
+linking...
+Program Size: Code=28008 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 8 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "a" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "b" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(392): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=28000 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 6 Warning(s).
+Build target 'first'
+assembling STM32F10x.s...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_lib.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_nvic.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_systick.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_i2c.c...
+compiling stm32f10x_it.c...
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "a" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "b" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(392): warning:  #1-D: last line of file ends without a newline
+compiling AT24C02.c...
+user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+compiling Delay.c...
+compiling I2C.c...
+user\I2C.c(167): warning:  #1-D: last line of file ends without a newline
+compiling MPU6050.c...
+compiling USART.c...
+compiling anbt_dmp_driver.c...
+compiling anbt_dmp_mpu6050.c...
+linking...
+Program Size: Code=28000 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 8 Warning(s).
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(31): warning:  #177-D: variable "sensor_timestamp" was declared but never referenced
+library\src\main.c(32): warning:  #177-D: variable "gyro" was declared but never referenced
+library\src\main.c(32): warning:  #177-D: variable "accel" was declared but never referenced
+library\src\main.c(32): warning:  #177-D: variable "sensors" was declared but never referenced
+library\src\main.c(33): warning:  #177-D: variable "more" was declared but never referenced
+library\src\main.c(34): warning:  #177-D: variable "quat" was declared but never referenced
+library\src\main.c(35): warning:  #177-D: variable "Yaw" was declared but never referenced
+library\src\main.c(36): warning:  #177-D: variable "Roll" was declared but never referenced
+library\src\main.c(36): warning:  #177-D: variable "Pitch" was declared but never referenced
+library\src\main.c(37): warning:  #177-D: variable "a" was declared but never referenced
+library\src\main.c(37): warning:  #177-D: variable "b" was declared but never referenced
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(393): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=14324 RO-data=288 RW-data=84 ZI-data=564  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 14 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "a" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "b" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(393): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=28000 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 6 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "b" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(393): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=28000 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 5 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.
+Build target 'first'
+compiling main.c...
+.\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(35): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(37): warning:  #550-D: variable "b" was set but never used
+library\src\main.c(37): warning:  #177-D: variable "c" was declared but never referenced
+library\src\main.c(393): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=28008 RO-data=3672 RW-data=160 ZI-data=600  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 5 Warning(s).
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Full Chip Erase Done.
+Load "D:\\project\\STM32\\project\\research\\obj\\first.AXF" 
+
+JLink info:
+-----------
+DLL: V4.08b, compiled Jun 30 2009 19:10:31
+Firmware: J-Link ARM V8 compiled Jul 17 2014 12:31:18
+Hardware: V8.00
+S/N : 91999999 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash,GDBFULL 
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.319V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Hardware-Breakpoints: 6
+Software-Breakpoints: 2048
+Watchpoints:          4
+JTAG speed: 3000 kHz
+---
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+Programming Done.
+Verify OK.

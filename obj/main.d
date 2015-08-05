@@ -30,5 +30,13 @@
 .\obj\main.o: .\user\I2C.h
 .\obj\main.o: .\user\MPU6050.h
 .\obj\main.o: .\user\Delay.h
-.\obj\main.o: .\user\USART.h
 .\obj\main.o: C:\Keil\ARM\RV31\INC\math.h
+.\obj\main.o: .\user\USART.h
+.\obj\main.o: .\user\AT24C02.h
+.\obj\main.o: .\user\MPU6050\anbt_dmp_fun.h
+.\obj\main.o: .\user\MPU6050\anbt_dmp_mpu6050.h
+.\obj\main.o: C:\Keil\ARM\RV31\INC\string.h
+.\obj\main.o: .\user\MPU6050\anbt_dmp_driver.h
+.\obj\main.o: C:\Keil\ARM\RV31\INC\stdio.h
+.\obj\main.o: C:\Keil\ARM\RV31\INC\stdint.h
+.\obj\main.o: C:\Keil\ARM\RV31\INC\stdlib.h
