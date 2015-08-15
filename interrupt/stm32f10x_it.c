@@ -21,6 +21,7 @@ long count=0;
 long count_ms=0;
 int num_flag=0;
 long CCR3,frequency,befrequency=0;
+u16 temp;
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -618,6 +619,17 @@ void USART2_IRQHandler(void)
 *******************************************************************************/
 void USART3_IRQHandler(void)
 {
+				
+                 if( USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)
+                 {
+                         
+                         temp = (u16)USART_ReceiveData(USART3);                      
+                         USART_SendData(USART1,temp);                 
+                         USART_ClearFlag(USART3,USART_FLAG_RXNE);
+
+                 }
+				 //Delay_Ms(10);
+
 }
 
 /*******************************************************************************

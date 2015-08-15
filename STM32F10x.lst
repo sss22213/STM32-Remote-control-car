@@ -434,8 +434,8 @@ ARM Macro Assembler    Page 7
   289 00000018                 END
               00000000 
 Command Line: --debug --xref --device=DARMSTM --apcs=interwork -o.\obj\STM32F10
-x.o -IC:\Keil\ARM\INC\ST\STM32F10x --predefine="__EVAL SETA 1" --predefine="__M
-ICROLIB SETA 1" --list=STM32F10x.lst STM32F10x.s
+x.o -IC:\Keil\ARM\INC\ST\STM32F10x --predefine="__MICROLIB SETA 1" --list=STM32
+F10x.lst STM32F10x.s
 
 
 
@@ -1116,4 +1116,4 @@ Symbol: __main
       At line 117 in file STM32F10x.s
 Comment: __main used once
 1 symbol
-390 symbols in table
+389 symbols in table

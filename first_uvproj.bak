@@ -162,7 +162,7 @@
             <DriverSelection>4099</DriverSelection>
           </Flash1>
           <Flash2>Segger\JL2CM3.dll</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
         </Utilities>
         <TargetArmAds>
@@ -345,7 +345,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\STM32_FW;.\user</IncludePath>
+              <IncludePath>..\STM32_FW;.\user;.\user\MPU6050</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -525,6 +525,16 @@
               <FileType>5</FileType>
               <FilePath>.\user\USART.h</FilePath>
             </File>
+            <File>
+              <FileName>IMU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\IMU.c</FilePath>
+            </File>
+            <File>
+              <FileName>IMU.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\IMU.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -533,27 +543,37 @@
             <File>
               <FileName>anbt_dmp_driver.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\user\MPU6050_DMP\anbt_dmp_driver.c</FilePath>
+              <FilePath>.\user\MPU6050\anbt_dmp_driver.c</FilePath>
             </File>
             <File>
               <FileName>anbt_dmp_driver.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\user\MPU6050_DMP\anbt_dmp_driver.h</FilePath>
+              <FilePath>.\user\MPU6050\anbt_dmp_driver.h</FilePath>
             </File>
             <File>
               <FileName>anbt_dmp_fun.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\user\MPU6050_DMP\anbt_dmp_fun.h</FilePath>
+              <FilePath>.\user\MPU6050\anbt_dmp_fun.h</FilePath>
             </File>
             <File>
               <FileName>anbt_dmp_mpu6050.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\user\MPU6050_DMP\anbt_dmp_mpu6050.c</FilePath>
+              <FilePath>.\user\MPU6050\anbt_dmp_mpu6050.c</FilePath>
             </File>
             <File>
               <FileName>anbt_dmp_mpu6050.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\user\MPU6050_DMP\anbt_dmp_mpu6050.h</FilePath>
+              <FilePath>.\user\MPU6050\anbt_dmp_mpu6050.h</FilePath>
+            </File>
+            <File>
+              <FileName>anbt_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\user\MPU6050\anbt_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>anbt_i2c.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\user\MPU6050\anbt_i2c.h</FilePath>
             </File>
           </Files>
         </Group>

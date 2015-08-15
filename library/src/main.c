@@ -4,7 +4,9 @@
 	#include "Delay.h"
 	#include "USART.h"
 	#include "AT24C02.h"
+	#include "IMU.h"
 	#include "anbt_dmp_fun.h"
+	#include "anbt_i2c.h"
 	#include "anbt_dmp_mpu6050.h"
 	#include "anbt_dmp_driver.h"
 	#include <math.h>
@@ -15,58 +17,67 @@
 	void  TM2_init(void);
 	void  NVIC_Configuration(void);
 	void L298N_Control(int Command);
+	int Euler_angles(void);
+	extern u16 temp;
 	//void niming(int16_t num,int16_t num2);
-	int HCSR04_TRIG(void);
-	char* HC05_AT(char* command);
-	int speed(void);		  
+	int HCSR04_TRIG(void);	  
 	extern int count; //計數值
-	//speed
-	float Vxo=0,Vyo=0,Vzo=0,Vx1=0,Vy1=0,Vz1=0;
 	float q0=1.0f,q1=0.0f,q2=0.0f,q3=0.0f;
-	int V=0;
 	int main()
-	{	
-
-
-		unsigned long sensor_timestamp;
-		short gyro[3], accel[3], sensors;
-		unsigned char more;
-		long quat[4];
-		float Yaw=0.00;
-	   	float Roll,Pitch;
-		int a=0,b=0,c=0;
-
+	{		
+	  	 
+		
 		RCC_Configuration();
 		GPIO_Configurataion();
 		NVIC_Configuration();
 		USART_Configurataion();
 		systick_configature();
 		TM2_init();
-		MPU6050_Init();
 		Delay_Ms(20);
-		//SART_SendData(USART1,AnBT_DMP_MPU6050_Init());
+		ANBT_I2C_Configuration();//Hard_I2C		
+	 	Delay_Ms(30); 	 
+	 	AnBT_DMP_MPU6050_Init();//soft_I2C
 
-		a=dmp_read_fifo(gyro, accel, quat, &sensor_timestamp, &sensors,&more); 
-		USART_SendData(USART1,a);	
-		  
-		if (sensors & INV_WXYZ_QUAT )
-		{
+		//初始化完成
+		GPIO_SetBits(GPIOA,GPIO_Pin_4);
+
+		Delay_Ms(30); 
+	while(1)
+	{
+		 
+		 
+			L298N_Control(1);
+			
+			if(HCSR04_TRIG()<15)
+			{
+		   		GPIO_SetBits(GPIOA,GPIO_Pin_5);
 		
-	 	 q0=quat[0] / q30;
-		 q1=quat[1] / q30;
-		 q2=quat[2] / q30;
-		 q3=quat[3] / q30;
-		 Pitch = asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3; // pitch
- 		 Roll = atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3; 
-		 Yaw = 	atan2(2*(q1*q2 + q0*q3),q0*q0+q1*q1-q2*q2-q3*q3) * 57.3;				
-		 a=Pitch*100;
-		 b=Roll*100;	 
+			}
+			else 
+			{
+				GPIO_ResetBits(GPIOA,GPIO_Pin_5);
+			
+			}		
+		 
+		 	Delay_Ms(5);
+
+			if(Euler_angles()==1)
+			{
+		   		GPIO_SetBits(GPIOA,GPIO_Pin_6);
 		
-	 	}	
-		
-		
+			}
+			else 
+			{
+				GPIO_ResetBits(GPIOA,GPIO_Pin_6);
+			
+			}
+			
+			 
+		 	
+		 
 			   
 	}
+}
 
 	void  RCC_Configuration(void)
 	{
@@ -124,7 +135,7 @@
 
 		GPIO_InitTypeDef g;
 
-		g.GPIO_Pin=GPIO_Pin_4;
+		g.GPIO_Pin=GPIO_Pin_4|GPIO_Pin_5|GPIO_Pin_6;
 
 		g.GPIO_Mode=GPIO_Mode_Out_PP;
 
@@ -169,9 +180,9 @@
 		g.GPIO_Speed=GPIO_Speed_50MHz;
 
 		GPIO_Init(GPIOA,&g);	  
-				  
-	   	//USART3
-	    //TX,PB10
+		
+		//USART3		  
+		 //TX,PB10
 		g.GPIO_Pin=GPIO_Pin_10;
 
 		g.GPIO_Mode=GPIO_Mode_AF_PP;
@@ -189,7 +200,7 @@
 		g.GPIO_Speed=GPIO_Speed_50MHz;
 
 		GPIO_Init(GPIOB,&g);	  
-
+		
 		//Moto_Control,PC1,PC3,PC7,PC9
 
 		g.GPIO_Pin=GPIO_Pin_1|GPIO_Pin_3;
@@ -244,6 +255,17 @@
 		NVIC_Struct.NVIC_IRQChannelCmd=ENABLE;
 
 		NVIC_Init(&NVIC_Struct);
+
+		NVIC_Struct.NVIC_IRQChannel = USART3_IRQChannel;                             
+
+        NVIC_Struct.NVIC_IRQChannelPreemptionPriority = 0;                                
+
+        NVIC_Struct.NVIC_IRQChannelSubPriority = 0;                                            
+
+        NVIC_Struct.NVIC_IRQChannelCmd = ENABLE;                                                 
+
+        NVIC_Init(&NVIC_Struct);
+
 		
 
 	}
@@ -317,77 +339,75 @@
 				GPIO_SetBits(GPIOC,GPIO_Pin_1);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_3);
 				//右
-				GPIO_SetBits(GPIOC,GPIO_Pin_7);
-				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
+				GPIO_SetBits(GPIOC,GPIO_Pin_9);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_7);
 				break;
 			case 2:	//反轉
 				//左
 				GPIO_ResetBits(GPIOC,GPIO_Pin_1);
 				GPIO_SetBits(GPIOC,GPIO_Pin_3);
 				//右
-				GPIO_ResetBits(GPIOC,GPIO_Pin_7);
-				GPIO_SetBits(GPIOC,GPIO_Pin_9);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
+				GPIO_SetBits(GPIOC,GPIO_Pin_7);
 				break;										  
 			case 3:	//右轉
 				//左
 				GPIO_ResetBits(GPIOC,GPIO_Pin_1);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_3);
 				//右
-				GPIO_ResetBits(GPIOC,GPIO_Pin_7);
-				GPIO_SetBits(GPIOC,GPIO_Pin_9);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
+				GPIO_SetBits(GPIOC,GPIO_Pin_7);
 				break;
 			case 4:	//右轉
 				//左
 				GPIO_ResetBits(GPIOC,GPIO_Pin_1);
 				GPIO_SetBits(GPIOC,GPIO_Pin_3);
 				//右
-				GPIO_ResetBits(GPIOC,GPIO_Pin_7);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_7);
 				break;							
 	
 		}
-
 	}
 	/*********************************************/
-	/*NAME:			HC05_AT						**/
-	/*INPUT:		char* command				**/
-	/*RETURN:		char*						**/
+	/*NAME:			Euler angles				**/
+	/*INPUT:		void						**/
+	/*RETURN:		int							**/
 	/*********************************************/
-	char* HC05_AT(char* command)
+	int Euler_angles(void)
 	{
-		USART_Sendstring(USART3,command);
-		return USART_Readstring(USART3,2);				
+		unsigned long sensor_timestamp;
+		short gyro[3], accel[3], sensors;
+		unsigned char more;
+		long quat[4];
+		float Yaw=0.00;
+		float Roll,Pitch;
+	  	dmp_read_fifo(gyro, accel, quat, &sensor_timestamp, &sensors,&more);	
+		 
+		if (sensors & INV_WXYZ_QUAT)
+		{
+	 	 q0=quat[0] / q30;
+		 q1=quat[1] / q30;
+		 q2=quat[2] / q30;
+		 q3=quat[3] / q30;
+		 Pitch = asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3; // pitch
+ 		 Roll = atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3; // roll
+		 Yaw = 	atan2(2*(q1*q2 + q0*q3),q0*q0+q1*q1-q2*q2-q3*q3) * 57.3;		
+
+		if(Pitch>0 || Pitch==0)
+		{
+			return 1;
+		
+		}
+		else if(Pitch<0)
+		{
+					 
+			 return 0;
+		
+		}
+		 
+		}
+		//USART_SendData(USART1,a);	
+		return 2;
 	}
-	int speed(void)
-	{
-		//parmeter
-		float T=0;
-		float t1,t2=0;
-		float	Temp=0;
-		t2=count;
-		T=t2-t1;
-
-		//calue
-		Temp=MPU6050_ACCEL_XOUT_M2s();
-		Vx1=(Vxo+Temp*T);
-
-		Temp=MPU6050_ACCEL_YOUT_M2s();
-		Vy1=(Vyo+Temp*T);
-
-		Temp=MPU6050_ACCEL_ZOUT_M2s();
-		Vz1=(Vzo+Temp*T);
-
-		//V=sqrt(Vx1*Vx1+Vy1*Vy1+Vz1*Vz1);
-		V=sqrt(Vx1*Vx1)-0xA0;
-		//restore
-		Vxo=MPU6050_ACCEL_XOUT_M2s();
-		Vyo=MPU6050_ACCEL_YOUT_M2s();
-		Vzo=MPU6050_ACCEL_ZOUT_M2s();			
-		t1=t2;
-
-		return V;
-	}  
-
-
-
 	
