@@ -1,0 +1,1 @@
+--cpp -c --device DARMSTM -D__MICROLIB -g -O0 --apcs=interwork -I..\STM32_FW -I.\user -I.\user\MPU6050 -I "C:\Keil\ARM\INC\ST\STM32F10x" -o ".\obj\virtualwire.o" --omf_browse ".\obj\virtualwire.crf" --depend ".\obj\virtualwire.d" "user\VirtualWire.cpp"

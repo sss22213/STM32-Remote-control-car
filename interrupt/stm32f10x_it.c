@@ -18,10 +18,13 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
 long count=0;
-long count_ms=0;
-int num_flag=0;
 long CCR3,frequency,befrequency=0;
+int flag=0;
 u16 temp;
+int io0=0,io1=0;
+int PWM1=0,PWM2=0;
+extern int control;
+extern void L298N_Control(int Command);
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -497,18 +500,7 @@ void TIM2_IRQHandler(void)
 *******************************************************************************/
 void TIM3_IRQHandler(void)
 {
-	frequency=0;
-	CCR3=0;
-	TIM_ClearITPendingBit(TIM3 ,TIM_FLAG_Update);
-	CCR3=TIM_GetCapture2(TIM3);
-	if(CCR3==0)
-	{
-		frequency=0;	
-	}
-	else
-	{
-		frequency=72000000/CCR3;
-	}
+
 }
 
 /*******************************************************************************
@@ -520,6 +512,120 @@ void TIM3_IRQHandler(void)
 *******************************************************************************/
 void TIM4_IRQHandler(void)
 {
+	if (TIM_GetITStatus(TIM4,TIM_IT_Update) == SET)
+    { 
+       	   	//前進-(一般,上坡)
+			if(control==1)
+			{
+				L298N_Control(1);
+				
+			}
+			//煞車
+			if(control==5)
+			{
+				L298N_Control(5);
+				
+			}
+		   
+		   //前進--下坡
+		   	if(control==6)
+			{
+				GPIO_ResetBits(GPIOC,GPIO_Pin_3);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
+			 	if(io0==0 && PWM1==0)
+				{
+			  	
+					GPIO_ResetBits(GPIOC,GPIO_Pin_7);
+					GPIO_ResetBits(GPIOC,GPIO_Pin_1);
+					io0=1;
+					PWM1=1;
+				}
+				else if(io0==1)
+				{
+					PWM1--;
+					GPIO_SetBits(GPIOC,GPIO_Pin_7);
+					GPIO_SetBits(GPIOC,GPIO_Pin_1);
+					io0=0;
+				
+				}
+			
+		
+				
+			}
+			//後退
+			if(control==2)
+			{
+				GPIO_ResetBits(GPIOC,GPIO_Pin_7);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_1);
+			 	if(io0==0 && PWM1==0)
+				{
+			  	
+					GPIO_ResetBits(GPIOC,GPIO_Pin_3);
+					GPIO_ResetBits(GPIOC,GPIO_Pin_9);
+					io0=1;
+					PWM1=1;
+				}
+				else if(io0==1)
+				{
+					PWM1--;
+					GPIO_SetBits(GPIOC,GPIO_Pin_3);
+					GPIO_SetBits(GPIOC,GPIO_Pin_9);
+					io0=0;
+				
+				}
+						
+			}
+		   	//左轉
+		   	if(control==3)
+			{
+				GPIO_ResetBits(GPIOC,GPIO_Pin_3);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
+			 	if(io0==0)
+				{
+			  	
+					GPIO_ResetBits(GPIOC,GPIO_Pin_7);
+					io0=1;
+					PWM1=1;
+				}
+				else if(io0==1)
+				{
+					PWM1--;
+					GPIO_SetBits(GPIOC,GPIO_Pin_7);
+					io0=0;
+				
+				}
+			
+			GPIO_ResetBits(GPIOC,GPIO_Pin_1);
+				
+			}
+			//右轉
+			if(control==4)
+			{
+				GPIO_ResetBits(GPIOC,GPIO_Pin_3);
+				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
+			 	if(io0==0 && PWM1==0)
+				{
+			  	
+					GPIO_ResetBits(GPIOC,GPIO_Pin_1);
+					io0=1;
+					PWM1=1;
+				}
+				else if(io0==1)
+				{
+					PWM1--;
+					GPIO_SetBits(GPIOC,GPIO_Pin_1);
+					io0=0;
+				
+				}
+			
+			GPIO_ResetBits(GPIOC,GPIO_Pin_7);
+				
+			}
+		
+			
+		
+        TIM_ClearITPendingBit(TIM4,TIM_FLAG_Update);
+    }
 }
 
 /*******************************************************************************
@@ -619,12 +725,13 @@ void USART2_IRQHandler(void)
 *******************************************************************************/
 void USART3_IRQHandler(void)
 {
-				
+				 
                  if( USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)
                  {
                          
                          temp = (u16)USART_ReceiveData(USART3);                      
-                         USART_SendData(USART1,temp);                 
+                         //USART_SendData(USART1,temp);
+						          
                          USART_ClearFlag(USART3,USART_FLAG_RXNE);
 
                  }

@@ -1,0 +1,1 @@
+-c --device DARMSTM -D__MICROLIB -g -O0 --apcs=interwork -I..\STM32_FW -I.\user -I.\user\MPU6050 -I "C:\Keil\ARM\INC\ST\STM32F10x" -o ".\obj\anbt_i2c.o" --omf_browse ".\obj\anbt_i2c.crf" --depend ".\obj\anbt_i2c.d" "user\MPU6050\anbt_i2c.c"

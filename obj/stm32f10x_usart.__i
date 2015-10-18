@@ -1,0 +1,1 @@
+-c --device DARMSTM -D__MICROLIB -g -O0 --apcs=interwork -I..\STM32_FW -I.\user -I.\user\MPU6050 -I "C:\Keil\ARM\INC\ST\STM32F10x" -o ".\obj\stm32f10x_usart.o" --omf_browse ".\obj\stm32f10x_usart.crf" --depend ".\obj\stm32f10x_usart.d" "library\src\stm32f10x_usart.c"

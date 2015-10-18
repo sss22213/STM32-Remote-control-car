@@ -1,0 +1,1 @@
+-c --device DARMSTM -D__MICROLIB -g -O0 --apcs=interwork -I..\STM32_FW -I.\user -I.\user\MPU6050 -I "C:\Keil\ARM\INC\ST\STM32F10x" -o ".\obj\anbt_dmp_mpu6050.o" --omf_browse ".\obj\anbt_dmp_mpu6050.crf" --depend ".\obj\anbt_dmp_mpu6050.d" "user\MPU6050\anbt_dmp_mpu6050.c"

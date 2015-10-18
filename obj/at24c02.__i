@@ -1,0 +1,1 @@
+-c --device DARMSTM -D__MICROLIB -g -O0 --apcs=interwork -I..\STM32_FW -I.\user -I.\user\MPU6050 -I "C:\Keil\ARM\INC\ST\STM32F10x" -o ".\obj\at24c02.o" --omf_browse ".\obj\at24c02.crf" --depend ".\obj\at24c02.d" "user\AT24C02.c"
