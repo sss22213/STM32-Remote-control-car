@@ -1,4 +1,5 @@
 .\obj\main.o: library\src\main.c
+.\obj\main.o: library\src\main.h
 .\obj\main.o: C:\Keil\ARM\INC\ST\STM32F10x\STM32f10x_lib.h
 .\obj\main.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h
 .\obj\main.o: C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_conf.h

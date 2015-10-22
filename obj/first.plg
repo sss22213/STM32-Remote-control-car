@@ -4,295 +4,43 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 D:\project\STM32\project\research\first.uvproj
-Project File Date:  09/02/2015
+Project File Date:  10/21/2015
 
 <h2>Output:</h2>
-Build target 'first'
-compiling VirtualWire.cpp...
-user\VirtualWire.cpp(4): error:  #169: expected a declaration
-user\VirtualWire.cpp(7): error:  #26: too many characters in character constant
-user\VirtualWire.cpp(13): error:  #7: unrecognized token
-user\VirtualWire.cpp(13): error:  #7: unrecognized token
-user\VirtualWire.cpp(95): error:  #8: missing closing quote
-user\VirtualWire.cpp(141): warning:  #870-D: invalid multibyte character sequence
-user\VirtualWire.cpp(141): warning:  #870-D: invalid multibyte character sequence
-user\VirtualWire.cpp(213): error:  #8: missing closing quote
-user\VirtualWire.cpp(251): error:  #8: missing closing quote
-user\VirtualWire.cpp(280): error:  #7: unrecognized token
-user\VirtualWire.cpp(326): error:  #8: missing closing quote
-user\VirtualWire.cpp(338): error:  #8: missing closing quote
-user\VirtualWire.cpp(491): error:  #26: too many characters in character constant
-user\VirtualWire.cpp(491): warning:  #12-D: parsing restarts here after previous syntax error
-user\VirtualWire.cpp(491): error:  #77-D: this declaration has no storage class or type specifier
-user\VirtualWire.cpp(491): error:  #20: identifier "clone" is undefined
-user\VirtualWire.cpp(491): error:  #65: expected a ";"
-user\VirtualWire.cpp(491): error:  #77-D: this declaration has no storage class or type specifier
-user\VirtualWire.cpp(491): error:  #65: expected a ";"
-user\VirtualWire.cpp(491): error:  #77-D: this declaration has no storage class or type specifier
-user\VirtualWire.cpp(491): error:  #65: expected a ";"
-user\VirtualWire.cpp(491): error:  #10: "#" not expected here
-user\VirtualWire.cpp(491): error:  #169: expected a declaration
-user\VirtualWire.cpp(491): error:  #7: unrecognized token
-user\VirtualWire.cpp(547): warning:  #870-D: invalid multibyte character sequence
-user\VirtualWire.cpp(547): warning:  #870-D: invalid multibyte character sequence
-user\VirtualWire.cpp(613): error:  #8: missing closing quote
-user\VirtualWire.cpp(618): error:  #10: "#" not expected here
-user\VirtualWire.cpp(618): error:  #8: missing closing quote
-user\VirtualWire.cpp(657): error:  #8: missing closing quote
-user\VirtualWire.cpp(662): error:  #8: missing closing quote
-user\VirtualWire.cpp(760): error:  #10: "#" not expected here
-user\VirtualWire.cpp(764): error:  #10: "#" not expected here
-user\VirtualWire.cpp(768): error:  #10: "#" not expected here
-user\VirtualWire.cpp(768): warning:  #12-D: parsing restarts here after previous syntax error
-user\VirtualWire.cpp(768): error:  #169: expected a declaration
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-user\VirtualWire.cpp(30): error:  #35: #error directive: Platform not defined
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-user\VirtualWire.cpp(33): error:  #5: cannot open source input file "VirtualWire.h": No such file or directory
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-user\VirtualWire.cpp(30): error:  #35: #error directive: Platform not defined
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-user\VirtualWire.h(186): error:  #35: #error directive: Platform not defined
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-user\VirtualWire.h(239): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(245): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(252): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(258): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(263): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(269): error:  #20: identifier "uint16_t" is undefined
-user\VirtualWire.h(285): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(298): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "buf" is undefined
-user\VirtualWire.h(305): error:  #18: expected a ")"
-user\VirtualWire.h(309): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(316): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(316): error:  #18: expected a ")"
-user\VirtualWire.h(321): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(328): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(343): warning:  #1-D: last line of file ends without a newline
-user\VirtualWire.cpp(34): error:  #5: cannot open source input file "util/crc16.h": No such file or directory
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-user\VirtualWire.cpp(30): error:  #35: #error directive: Platform not defined
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-user\VirtualWire.h(186): error:  #35: #error directive: Platform not defined
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-user\VirtualWire.h(239): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(245): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(252): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(258): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(263): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(269): error:  #20: identifier "uint16_t" is undefined
-user\VirtualWire.h(285): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(298): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "buf" is undefined
-user\VirtualWire.h(305): error:  #18: expected a ")"
-user\VirtualWire.h(309): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(316): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(316): error:  #18: expected a ")"
-user\VirtualWire.h(321): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(328): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(343): warning:  #1-D: last line of file ends without a newline
-user\VirtualWire.cpp(34): error:  #5: cannot open source input file "util/crc16.h": No such file or directory
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-user\VirtualWire.h(239): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(245): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(252): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(258): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(263): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(269): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(285): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(298): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "buf" is undefined
-user\VirtualWire.h(305): error:  #18: expected a ")"
-user\VirtualWire.h(309): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(316): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(316): error:  #18: expected a ")"
-user\VirtualWire.h(321): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(328): error:  #757: "uint8_t" is not a type name
-user\VirtualWire.h(343): warning:  #1-D: last line of file ends without a newline
-user\VirtualWire.cpp(34): error:  #5: cannot open source input file "util/crc16.h": No such file or directory
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-user\VirtualWire.h(239): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(245): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(252): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(258): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(263): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(269): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(285): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(298): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "buf" is undefined
-user\VirtualWire.h(305): error:  #18: expected a ")"
-user\VirtualWire.h(309): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(316): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(316): error:  #18: expected a ")"
-user\VirtualWire.h(321): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(328): error:  #20: identifier "u8" is undefined
-user\VirtualWire.h(343): warning:  #1-D: last line of file ends without a newline
-user\VirtualWire.cpp(34): error:  #5: cannot open source input file "util/crc16.h": No such file or directory
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): error:  #65: expected a ";"
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): warning:  #64-D: declaration does not declare anything
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(401): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(467): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(515): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-user\VirtualWire.h(285): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(305): error:  #20: identifier "buf" is undefined
-user\VirtualWire.h(305): error:  #18: expected a ")"
-user\VirtualWire.h(316): error:  #18: expected a ")"
-user\VirtualWire.h(343): warning:  #1-D: last line of file ends without a newline
-user\VirtualWire.cpp(34): error:  #5: cannot open source input file "util/crc16.h": No such file or directory
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): error:  #65: expected a ";"
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): warning:  #64-D: declaration does not declare anything
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(401): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(467): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(515): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-user\VirtualWire.h(316): error:  #20: identifier "uint8_t" is undefined
-user\VirtualWire.h(316): error:  #20: identifier "buf" is undefined
-user\VirtualWire.h(316): error:  #18: expected a ")"
-user\VirtualWire.h(343): warning:  #1-D: last line of file ends without a newline
-user\VirtualWire.cpp(34): error:  #5: cannot open source input file "util/crc16.h": No such file or directory
-Target not created
-Build target 'first'
-compiling VirtualWire.cpp...
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): error:  #65: expected a ";"
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): warning:  #64-D: declaration does not declare anything
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(401): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(467): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(515): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-user\VirtualWire.h(343): warning:  #1-D: last line of file ends without a newline
-user\VirtualWire.cpp(34): error:  #5: cannot open source input file "util/crc16.h": No such file or directory
-Target not created
-Build target 'first'
-compiling stm32f10x_gpio.c...
-compiling stm32f10x_lib.c...
-compiling stm32f10x_rcc.c...
-compiling stm32f10x_flash.c...
-compiling stm32f10x_usart.c...
-compiling stm32f10x_nvic.c...
-compiling stm32f10x_tim.c...
-compiling stm32f10x_systick.c...
-compiling stm32f10x_exti.c...
-compiling stm32f10x_i2c.c...
-compiling stm32f10x_it.c...
 compiling main.c...
 .\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
-library\src\main.c(397): warning:  #177-D: variable "OC" was declared but never referenced
-library\src\main.c(526): warning:  #550-D: variable "Yaw" was set but never used
-library\src\main.c(527): warning:  #550-D: variable "Roll" was set but never used
-compiling AT24C02.c...
-user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
-compiling Delay.c...
-compiling I2C.c...
-compiling USART.c...
-compiling VirtualWire.cpp...
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): error:  #65: expected a ";"
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): warning:  #64-D: declaration does not declare anything
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(401): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(467): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(515): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-user\VirtualWire.h(343): warning:  #1-D: last line of file ends without a newline
-user\VirtualWire.cpp(34): error:  #5: cannot open source input file "util/crc16.h": No such file or directory
-compiling anbt_dmp_driver.c...
-compiling anbt_dmp_mpu6050.c...
-compiling anbt_i2c.c...
-Target not created
+library\src\main.h(74): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(307): warning:  #177-D: variable "OC" was declared but never referenced
+library\src\main.c(423): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(424): warning:  #550-D: variable "Roll" was set but never used
+library\src\main.c - 0 Error(s), 5 Warning(s).
 Build target 'first'
-compiling stm32f10x_gpio.c...
-compiling stm32f10x_lib.c...
-compiling stm32f10x_rcc.c...
-compiling stm32f10x_flash.c...
-compiling stm32f10x_usart.c...
-compiling stm32f10x_nvic.c...
-compiling stm32f10x_tim.c...
-compiling stm32f10x_systick.c...
-compiling stm32f10x_exti.c...
-compiling stm32f10x_i2c.c...
-compiling stm32f10x_it.c...
+linking...
+Program Size: Code=27928 RO-data=3672 RW-data=164 ZI-data=596  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 0 Warning(s).
+Build target 'first'
 compiling main.c...
 .\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
-library\src\main.c(397): warning:  #177-D: variable "OC" was declared but never referenced
-library\src\main.c(526): warning:  #550-D: variable "Yaw" was set but never used
-library\src\main.c(527): warning:  #550-D: variable "Roll" was set but never used
-compiling AT24C02.c...
-user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
-compiling Delay.c...
-compiling I2C.c...
-compiling USART.c...
-compiling VirtualWire.cpp...
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(401): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(467): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(515): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-user\VirtualWire.h(343): warning:  #1-D: last line of file ends without a newline
-user\VirtualWire.cpp(34): error:  #5: cannot open source input file "util/crc16.h": No such file or directory
-compiling anbt_dmp_driver.c...
-compiling anbt_dmp_mpu6050.c...
-compiling anbt_i2c.c...
+library\src\main.h(62): error:  #101: "L298N_Control" has already been declared in the current scope
+library\src\main.h(85): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(307): warning:  #177-D: variable "OC" was declared but never referenced
+library\src\main.c(423): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(424): warning:  #550-D: variable "Roll" was set but never used
 Target not created
 Build target 'first'
-compiling stm32f10x_gpio.c...
-compiling stm32f10x_lib.c...
-compiling stm32f10x_rcc.c...
-compiling stm32f10x_flash.c...
-compiling stm32f10x_usart.c...
-compiling stm32f10x_nvic.c...
-compiling stm32f10x_tim.c...
-compiling stm32f10x_systick.c...
-compiling stm32f10x_exti.c...
-compiling stm32f10x_i2c.c...
-compiling stm32f10x_it.c...
 compiling main.c...
 .\user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
-library\src\main.c(397): warning:  #177-D: variable "OC" was declared but never referenced
-library\src\main.c(526): warning:  #550-D: variable "Yaw" was set but never used
-library\src\main.c(527): warning:  #550-D: variable "Roll" was set but never used
-compiling AT24C02.c...
-user\AT24C02.h(29): warning:  #1-D: last line of file ends without a newline
-compiling Delay.c...
-compiling I2C.c...
-compiling USART.c...
-compiling VirtualWire.cpp...
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): error:  #65: expected a ";"
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_type.h(55): warning:  #64-D: declaration does not declare anything
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(401): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(467): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-C:\Keil\ARM\INC\ST\STM32F10x\stm32f10x_map.h(515): warning:  #368-D: class "<unnamed>" defines no constructor to initialize the following:
-user\VirtualWire.h(343): warning:  #1-D: last line of file ends without a newline
-user\VirtualWire.cpp(34): error:  #5: cannot open source input file "util/crc16.h": No such file or directory
-compiling anbt_dmp_driver.c...
-compiling anbt_dmp_mpu6050.c...
-compiling anbt_i2c.c...
-Target not created
+library\src\main.h(85): warning:  #1-D: last line of file ends without a newline
+library\src\main.c(307): warning:  #177-D: variable "OC" was declared but never referenced
+library\src\main.c(423): warning:  #550-D: variable "Yaw" was set but never used
+library\src\main.c(424): warning:  #550-D: variable "Roll" was set but never used
+linking...
+Program Size: Code=27928 RO-data=3672 RW-data=164 ZI-data=596  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 5 Warning(s).
+Build target 'first'
+linking...
+Program Size: Code=27928 RO-data=3672 RW-data=164 ZI-data=596  
+FromELF: creating hex file...
+".\obj\first.axf" - 0 Error(s), 0 Warning(s).

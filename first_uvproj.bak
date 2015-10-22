@@ -506,16 +506,6 @@
               <FilePath>.\user\I2C.h</FilePath>
             </File>
             <File>
-              <FileName>MPU6050.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\user\MPU6050.c</FilePath>
-            </File>
-            <File>
-              <FileName>MPU6050.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\user\MPU6050.h</FilePath>
-            </File>
-            <File>
               <FileName>USART.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\user\USART.c</FilePath>
@@ -564,21 +554,6 @@
               <FileName>anbt_i2c.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\user\MPU6050\anbt_i2c.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>HTU21</GroupName>
-          <Files>
-            <File>
-              <FileName>HTU21.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\user\HTU21.c</FilePath>
-            </File>
-            <File>
-              <FileName>HTU21.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\user\HTU21.h</FilePath>
             </File>
           </Files>
         </Group>

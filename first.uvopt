@@ -211,19 +211,19 @@
 
   <Group>
     <GroupName>library</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <File>
       <GroupNumber>2</GroupNumber>
       <FileNumber>2</FileNumber>
       <FileType>1</FileType>
-      <tvExp>0</tvExp>
+      <tvExp>1</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>45</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>49</TopLine>
+      <CurrentLine>49</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\library\src\stm32f10x_gpio.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_gpio.c</FilenameWithoutPath>
@@ -369,8 +369,8 @@
       <Focus>0</Focus>
       <ColumnNumber>148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>510</TopLine>
-      <CurrentLine>516</CurrentLine>
+      <TopLine>606</TopLine>
+      <CurrentLine>606</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\interrupt\stm32f10x_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_it.c</FilenameWithoutPath>
@@ -402,13 +402,27 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>28</ColumnNumber>
+      <ColumnNumber>9</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>20</CurrentLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\library\src\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
+    </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>0</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <ColumnNumber>0</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
+      <bDave2>0</bDave2>
+      <PathWithFileName>.\library\inc\main.h</PathWithFileName>
+      <FilenameWithoutPath>main.h</FilenameWithoutPath>
     </File>
   </Group>
 
@@ -507,10 +521,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>51</ColumnNumber>
+      <ColumnNumber>23</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>25</TopLine>
-      <CurrentLine>38</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\user\USART.c</PathWithFileName>
       <FilenameWithoutPath>USART.c</FilenameWithoutPath>
@@ -544,8 +558,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>588</TopLine>
-      <CurrentLine>588</CurrentLine>
+      <TopLine>516</TopLine>
+      <CurrentLine>516</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\user\MPU6050\anbt_dmp_driver.c</PathWithFileName>
       <FilenameWithoutPath>anbt_dmp_driver.c</FilenameWithoutPath>
@@ -586,8 +600,8 @@
       <Focus>0</Focus>
       <ColumnNumber>64</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1171</TopLine>
-      <CurrentLine>1196</CurrentLine>
+      <TopLine>307</TopLine>
+      <CurrentLine>307</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\user\MPU6050\anbt_dmp_mpu6050.c</PathWithFileName>
       <FilenameWithoutPath>anbt_dmp_mpu6050.c</FilenameWithoutPath>
@@ -2230,22 +2244,22 @@
       <ActiveTab>2</ActiveTab>
       <Documents>
         <Doc>
+          <Name>.\library\src\main.c</Name>
+          <ColumnNumber>9</ColumnNumber>
+          <TopLine>1</TopLine>
+          <CurrentLine>1</CurrentLine>
+        </Doc>
+        <Doc>
+          <Name>library\src\main.h</Name>
+          <ColumnNumber>32</ColumnNumber>
+          <TopLine>45</TopLine>
+          <CurrentLine>45</CurrentLine>
+        </Doc>
+        <Doc>
           <Name>.\interrupt\stm32f10x_it.c</Name>
           <ColumnNumber>148</ColumnNumber>
-          <TopLine>510</TopLine>
-          <CurrentLine>516</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\library\src\main.c</Name>
-          <ColumnNumber>28</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>20</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\user\USART.c</Name>
-          <ColumnNumber>51</ColumnNumber>
-          <TopLine>25</TopLine>
-          <CurrentLine>38</CurrentLine>
+          <TopLine>606</TopLine>
+          <CurrentLine>606</CurrentLine>
         </Doc>
       </Documents>
     </MDIGroup>

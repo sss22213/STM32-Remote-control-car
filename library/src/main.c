@@ -1,41 +1,7 @@
-	#include "STM32f10x_lib.h"
-	#include "I2C.h"
-	#include "MPU6050.h"
-	#include "Delay.h"
-	#include "USART.h"
-	#include "AT24C02.h"
-	#include "IMU.h"
-	#include "anbt_dmp_fun.h"
-	#include "anbt_i2c.h"
-	#include "anbt_dmp_mpu6050.h"
-	#include "anbt_dmp_driver.h"
-	#include <math.h>
-	#define q30  1073741824.0f
-	void delay(int);	
-	void  RCC_Configuration(void);
-	void  GPIO_Configurataion(void);
-	void  TM2_init(void);
-	void  NVIC_Configuration(void);
-	void L298N_Control(int Command);
-	int Euler_angles(void);
-	extern u16 temp;
-	int HCSR04_TRIG(void);	  
-
-	extern int count; //璸计
-	float q0=1.0f,q1=0.0f,q2=0.0f,q3=0.0f;
-
-	//safe parmenter
-	int dangerous=0;
-	int distance=0;
-	int Up_Down=0;
-
-	//よ北
-	int control;
+	#include "main.h"
 	int main()
 	{		
 	  	 
-		
-
 		RCC_Configuration();
 		GPIO_Configurataion();
 		NVIC_Configuration();
@@ -46,16 +12,9 @@
 		ANBT_I2C_Configuration();
 	 	Delay_Ms(30); 
 		AnBT_DMP_MPU6050_Init();
-		/*	 
-	 	while(AnBT_DMP_MPU6050_Init()!=0)
-		{
-		
-			GPIO_SetBits(GPIOA,GPIO_Pin_5);
-			//Soft_I2C_MPU6050Reset();
-			Delay_Ms(10);
-		
-		} */
-		
+
+	
+	
 		//﹍てЧΘ
 		GPIO_SetBits(GPIOA,GPIO_Pin_4);
 		GPIO_ResetBits(GPIOA,GPIO_Pin_5);
@@ -85,100 +44,41 @@
 			
 			 switch(Up_Down)
 			 {
-			 	case 1:	
+			 	case Down:	
+					Delay_Ms(10);
+					USART_SendData(USART3,'O');
+					break;
+			 	case UP:	
 					control=1;	
 					Delay_Ms(10);
 					USART_SendData(USART3,'U');
 					break;
-				case 0:	
-					Delay_Ms(10);
-					USART_SendData(USART3,'O');
-					break;
-				case 2:
+				case Float:
 					GPIO_ResetBits(GPIOA,GPIO_Pin_6);
 					Delay_Ms(10);
 					USART_SendData(USART3,'F');
 					break;
 				default:break;
 			 }
-			 /*******************************/
-			/*
-			//℡盎代
-			if(Up_Down==1)
-			{
-		   		
-				Delay_Ms(10);
-				USART_SendData(USART3,'U');
-				
-			}
-			else if((Up_Down==0)) 
-			{
-			
-				Delay_Ms(10);
-				USART_SendData(USART3,'O');
-			
-			}
-			else if((Up_Down==2)) 
-			{
-				GPIO_ResetBits(GPIOA,GPIO_Pin_6);
-				Delay_Ms(10);
-				USART_SendData(USART3,'F');
-			
-			} */
 			Delay_Ms(10);
 
 			//放
 			
-		   	USART_SendData(USART3,Soft_I2C_ReadTemp()-3+10);
-		
+		   	USART_SendData(USART3,Soft_I2C_ReadTemp()-3+10);		
 			Delay_Ms(3);
+			USART_SendData(USART1,temp);
 
-			 USART_SendData(USART1,temp);
 		   	/***************よ北*************/
 			 switch(temp)
 			 {
-			 	case 'G':	control=1;	break;
-				case 'L':	control=3;	break;
-				case 'R':	control=4;	break;
-				case 'S':	control=5;	break;
-				case 'B':	control=2;	break;
+			 	case Go:	control=1;	break;
+				case Left:	control=3;	break;
+				case Right:	control=4;	break;
+				case Stop:	control=5;	break;
+				case Back:	control=2;	break;
 				default:break;
 			 }
-			/************************************/
-			/*
-			if(temp=='G')
-			{	
-				
-				control=1;	
-			}
-			if(temp=='L')
-			{
-			
-				control=3;
-			
-			}
-			if(temp=='R')
-			{
-			
-				control=4;
-			
-			}
-			if(temp=='S')
-			{
-			
-				control=5;
-			
-			}
-			if(temp=='B')
-			{
-			
-				control=2;
-			
-			} 
-			*/	
-			
-
-			   
+		
 		}		  
 }
 
@@ -332,6 +232,16 @@
 		g.GPIO_Speed=GPIO_Speed_50MHz;
 
 		GPIO_Init(GPIOB,&g);
+		
+		//PA14
+		  
+		g.GPIO_Pin=GPIO_Pin_14;
+
+		g.GPIO_Mode=GPIO_Mode_Out_PP;
+
+		g.GPIO_Speed=GPIO_Speed_50MHz;
+
+		GPIO_Init(GPIOA,&g);
 
 		
 	
@@ -417,19 +327,6 @@
 		TIM_ITConfig(TIM4,TIM_IT_Update, ENABLE);
     	TIM_Cmd(TIM4, ENABLE);
 
-		/*//UP_Dwon
-		TIM_Basestruct.TIM_Prescaler=550;
-		TIM_Basestruct.TIM_CounterMode=TIM_CounterMode_Up;
-		TIM_Basestruct.TIM_Period=1000;
-		TIM_Basestruct.TIM_ClockDivision=TIM_CKD_DIV1;
-		TIM_Basestruct.TIM_RepetitionCounter=0;
-		TIM_TimeBaseInit(TIM3,&TIM_Basestruct);	
-
-		TIM_ITConfig(TIM3,TIM_IT_Update, ENABLE);
-    	TIM_Cmd(TIM3, ENABLE); */
-    
-	   
-	
 	}
 	/*********************************************/
 	/*NAME:			HCSR04_TRIG					**/
@@ -470,7 +367,7 @@
 	{
 		switch(Command)
 		{
-			case 1: //タ锣
+			case LGO: //タ锣
 				//オ
 				GPIO_SetBits(GPIOC,GPIO_Pin_1);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_3);
@@ -478,7 +375,7 @@
 				GPIO_SetBits(GPIOC,GPIO_Pin_7);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
 				break;
-			case 2:	//は锣
+			case LBAK:	//は锣
 				//オ
 				GPIO_ResetBits(GPIOC,GPIO_Pin_1);
 				GPIO_SetBits(GPIOC,GPIO_Pin_3);
@@ -486,7 +383,7 @@
 				GPIO_ResetBits(GPIOC,GPIO_Pin_7);
 				GPIO_SetBits(GPIOC,GPIO_Pin_9);
 				break;										  
-			case 3:	
+			case LLET:	
 				//オ
 				GPIO_ResetBits(GPIOC,GPIO_Pin_1);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_3);
@@ -494,7 +391,7 @@
 				GPIO_SetBits(GPIOC,GPIO_Pin_7);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
 				break;
-			case 4:	
+			case LRIG:	
 				//オ
 				GPIO_SetBits(GPIOC,GPIO_Pin_1);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_3);
@@ -502,7 +399,7 @@
 				GPIO_ResetBits(GPIOC,GPIO_Pin_7);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_9);
 				break;
-			case 5:	
+			case LSTOP:	
 				//オ
 				GPIO_ResetBits(GPIOC,GPIO_Pin_1);
 				GPIO_ResetBits(GPIOC,GPIO_Pin_3);
@@ -529,34 +426,17 @@
 		 
 		if (sensors & INV_WXYZ_QUAT)
 		{
-	 	 q0=quat[0] / q30;
-		 q1=quat[1] / q30;
-		 q2=quat[2] / q30;
-		 q3=quat[3] / q30;
-		 Pitch = asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3; 
- 		 Roll = atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3; 
-		 Yaw = 	atan2(2*(q1*q2 + q0*q3),q0*q0+q1*q1-q2*q2-q3*q3) * 57.3;		
+	 	 	q0=quat[0] / q30;
+		 	q1=quat[1] / q30;
+		 	q2=quat[2] / q30;
+		 	q3=quat[3] / q30;
+		 	Pitch = asin(-2 * q1 * q3 + 2 * q0* q2)* 57.3; 
+ 		 	Roll = atan2(2 * q2 * q3 + 2 * q0 * q1, -2 * q1 * q1 - 2 * q2* q2 + 1)* 57.3; 
+			Yaw = 	atan2(2*(q1*q2 + q0*q3),q0*q0+q1*q1-q2*q2-q3*q3) * 57.3;		
 	  
-		if(Pitch>1)
-		{
-			return 1;
-		
+			if(Pitch>1)return 1;
+			else if(Pitch<-9)return 0;
+			else	return 2; 	 
 		}
-		else if(Pitch<-9)
-		{
-					 
-			 return 0;
-		
-		}
-		else
-		{
-			return 2;
-		
-		} 
-			
-		 	 
-		}
-	
-	
-		   return -1;
+		return -1;
 	}
